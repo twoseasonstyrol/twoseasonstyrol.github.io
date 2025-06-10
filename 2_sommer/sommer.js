@@ -41,7 +41,17 @@ L.control.scale({
     imperial: false,
 }).addTo(map);
 
-
+// Rainviewer
+L.control.rainviewer({ 
+    position: 'bottomleft',
+    nextButtonText: '>',
+    playStopButtonText: 'Play/Stop',
+    prevButtonText: '<',
+    positionSliderLabelText: "Hour:",
+    opacitySliderLabelText: "Opacity:",
+    animationInterval: 500,
+    opacity: 0.5
+}).addTo(map);
 
 
 async function loadSwim(url) {
@@ -56,7 +66,7 @@ async function loadSwim(url) {
             fillOpacity: 0.5,
         },
         onEachFeature: function (feature, layer) {
-            console.log(feature.properties);
+            //console.log(feature.properties);
             layer.bindPopup(`
                 <h4>${feature.properties.ANLAGE_NAME}</h4>
                 <h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
@@ -65,21 +75,10 @@ async function loadSwim(url) {
     }).addTo(overlays.swim);
 }
 
-// Rainviewer
-L.control.rainviewer({ 
-    position: 'bottomleft',
-    nextButtonText: '>',
-    playStopButtonText: 'Play/Stop',
-    prevButtonText: '<',
-    positionSliderLabelText: "Hour:",
-    opacitySliderLabelText: "Opacity:",
-    animationInterval: 500,
-    opacity: 0.5
-}).addTo(map);
 
 // Wetterstationen
 async function loadStations(url) {
-    console.log(url)
+    //console.log(url)
     let response = await fetch(url);
     let jsondata = await response.json();
     //console.log(jsondata);
@@ -97,7 +96,7 @@ async function loadStations(url) {
         onEachFeature: function (feature, layer) {
             let pointInTime = new Date(feature.properties.date);
             //console.log(pointInTime);
-            console.log(feature);
+            //console.log(feature);
             layer.bindPopup(`
                 <h4>${feature.properties.name} (${feature.geometry.coordinates[2]}m)</h4>
                 <ul>
@@ -219,6 +218,6 @@ function getColor(value, ramp) {
 
 
 loadSwim("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/arcgis/rest/services/Schwimmanlagen/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson");
-loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
+//loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
