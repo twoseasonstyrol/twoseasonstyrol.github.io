@@ -56,7 +56,7 @@ L.control.rainviewer({
 }).addTo(map);
 
 
-async function loadSwim(url) {
+async function loadSki(url) {
     //console.log(url);
     let response = await fetch(url);
     let jasondata = await response.json();
@@ -68,16 +68,16 @@ async function loadSwim(url) {
             fillOpacity: 0.5,
         },
         onEachFeature: function (feature, layer) {
-            //console.log(feature.properties);
+            console.log(feature.properties);
             layer.bindPopup(`
-                <h4>${feature.properties.ANLAGE_NAME}</h4>
-                <h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
+                <h4>${feature.properties.NAME}</h4>
+                <h4>${feature.properties.OBJECTID}</h4>
             `);
         }
-    }).addTo(overlays.swim);
+    }).addTo(overlays.ski);
 }
 
-async function loadSki(url) {
+async function loadLift(url) {
     //console.log(url);
     let response = await fetch(url);
     let jasondata = await response.json();
@@ -95,7 +95,7 @@ async function loadSki(url) {
                 //<h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
             //`);
         //}
-    }).addTo(overlays.ski);
+    }).addTo(overlays.lift);
 }
 
 
