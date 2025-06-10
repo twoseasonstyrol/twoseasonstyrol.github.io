@@ -16,6 +16,7 @@ let overlays = {
     snow: L.featureGroup(),
     direction: L.featureGroup(),
     lift: L.featureGroup(),
+    ski: L.featureGroup().addTo(map),
 }
 
 // Layer control
@@ -28,6 +29,7 @@ L.control.layers({
     "BasemapAT Terrain": L.tileLayer.provider('BasemapAT.terrain'),
     "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface'),
 }, {
+    "Skigebiete": overlays.ski,
     "Aufstiegshilfen": overlays.lift,
     "Wetterstationen": overlays.stations,
     "Temperatur": overlays.temperature,
@@ -53,7 +55,29 @@ L.control.rainviewer({
     opacity: 0.5
 }).addTo(map);
 
-async function loadLift(url) {
+
+async function loadSwim(url) {
+    //console.log(url);
+    let response = await fetch(url);
+    let jasondata = await response.json();
+    L.geoJSON(jasondata, {
+        style: {
+            color: "#00aaff",
+            weight: 2,
+            fillColor: "#00aaff",
+            fillOpacity: 0.5,
+        },
+        onEachFeature: function (feature, layer) {
+            //console.log(feature.properties);
+            layer.bindPopup(`
+                <h4>${feature.properties.ANLAGE_NAME}</h4>
+                <h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
+            `);
+        }
+    }).addTo(overlays.swim);
+}
+
+async function loadSki(url) {
     //console.log(url);
     let response = await fetch(url);
     let jasondata = await response.json();
@@ -71,7 +95,7 @@ async function loadLift(url) {
                 //<h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
             //`);
         //}
-    }).addTo(overlays.lift);
+    }).addTo(overlays.ski);
 }
 
 
@@ -216,6 +240,7 @@ function getColor(value, ramp) {
 
 
 
+loadSki("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/arcgis/rest/services/URP_Schigebietsgrenzen/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson");
 loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
