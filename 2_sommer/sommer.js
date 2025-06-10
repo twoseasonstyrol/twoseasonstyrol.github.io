@@ -15,6 +15,7 @@ let overlays = {
     wind: L.featureGroup(),
     snow: L.featureGroup(),
     direction: L.featureGroup(),
+    lift: L.featureGroup(),
     swim: L.featureGroup().addTo(map),
 }
 
@@ -29,6 +30,7 @@ L.control.layers({
     "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface'),
 }, {
     "Schwimmbäder": overlays.swim,
+    "Aufstiegshilfen": overlays.lift,
     "Wetterstationen": overlays.stations,
     "Temperatur": overlays.temperature,
     "Wind": overlays.wind,
@@ -75,6 +77,27 @@ async function loadSwim(url) {
     }).addTo(overlays.swim);
 }
 
+async function loadLift(url) {
+    //console.log(url);
+    let response = await fetch(url);
+    let jasondata = await response.json();
+    L.geoJSON(jasondata, {
+        style: {
+            color: "#00aaff",
+            weight: 2,
+            fillColor: "#00aaff",
+            fillOpacity: 0.5,
+        },
+        //onEachFeature: function (feature, layer) {
+            //console.log(feature.properties);
+            //layer.bindPopup(`
+                //<h4>${feature.properties.ANLAGE_NAME}</h4>
+                //<h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
+            //`);
+        //}
+    }).addTo(overlays.lift);
+}
+
 
 // Wetterstationen
 async function loadStations(url) {
@@ -86,11 +109,11 @@ async function loadStations(url) {
         attribution: "Datenquelle: <a href='https://www.eea.europa.eu/en/datahub/'>EEA</a>",
         pointToLayer: function (feature, latlng) {
             return L.marker(latlng, {
-                icon: L.icon({
+                //icon: L.icon({
                     //iconUrl: "icons/wifi.png",
-                    iconAnchor: [16, 37],
-                    popupAnchor: [0, -37],
-                })
+                    //iconAnchor: [16, 37],
+                    //popupAnchor: [0, -37],
+                //})
             });
         },
         onEachFeature: function (feature, layer) {
@@ -163,7 +186,7 @@ function showSnow(jsondata) {
 function showWind(jsondata) {
     L.geoJSON(jsondata, {
         filter: function (feature) {
-            console.log(feature.properties)
+            //console.log(feature.properties)
             if (feature.properties.HS > 0 && feature.properties.HS < 1000) {
                 return true;
             }
@@ -185,7 +208,7 @@ function showWind(jsondata) {
 function showDirect(jsondata) {
     L.geoJSON(jsondata, {
         filter: function (feature) {
-            console.log(feature.properties)
+            //console.log(feature.properties)
             if (feature.properties.WR > 0 && feature.properties.WR < 400) {
                 return true;
             }
@@ -218,6 +241,6 @@ function getColor(value, ramp) {
 
 
 loadSwim("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/arcgis/rest/services/Schwimmanlagen/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson");
-//loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
+loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
