@@ -13,6 +13,13 @@ main {
     margin: auto;
 }
 
+header a img {
+    border: 1px solid silver;
+    border-radius: 50%;
+    margin-top: -75px;
+    margin-left: calc(50% - 50px);
+}
+
 header {
     display: grid;
     grid-template-columns: 80% 20%;
