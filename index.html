@@ -18,70 +18,43 @@
     <!-- Leaflet Providers -->
     <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
 
-     <!-- eigene Stile und Hauptskript -->
+    <!-- eigene Stile und Hauptskript -->
     <link rel="stylesheet" href="main.css">
     <script defer src="main.js"></script>
 
 </head>
 
 <body>
-<!-- Titel des Projekts -->
-<h1>twoseasonstyrol</h1>
-
-<!-- Teammitglieder -->
-<h3>Samuel Uzelino</h3>
-<h3>Florentine Busch</h3>
-<h3>Paulina Wörnhör</h3>
-
-<!-- einem Link auf konzept.pdf -->
-<a href="konzept.pdf">Konzept PDF</a>
-
-<!-- Start -->
-<!-- Header -->
-<header>
-        <figure>
-            <!--<img src="images/header.jpg" alt="Header Bild">
-            <a href="https://github.com/sam-uze"><img src="images/user.jpg" alt="Eine Blume" /></a>-->
-            
-        </figure>
-    </header>
-
+    <header class="banner-header">
+    <nav class="top-nav">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="./sommer/index.html"><i class="fa-solid fa-sun"></i> Sommer</a>
+        <a href="./winter/index.html"><i class="fa-solid fa-snowflake"></i> Winter</a>
+    </nav>
+    <img src="images/banner.jpg" alt="freizeit banner" class="banner-image" />
+</header>
 
     <main>
         <article>
             <h1>Der Freizeit Kompass</h1>
             <h2>Deine Saison - Dein Ticket - Dein Plan</h2>
-            <p>Text</p>
+            <p>Entdecke mit deinem Freizeitticket die Highlights der Sommer- und Wintersaison in Tirol!
+                Ob verschneite Gipfel mit den schönsten Skigebieten, sonnige Freibäder oder Badeseen in deiner Nähe, unvergessliche Wanderungen oder 
+                interessante Museen - dein Freizeitkompass zeigt dir den Weg zum nächsten Abenteuer.</p>
             <p>Text</p>
             <a href="https://www.freizeitticket.at/">Quelle: Freizeitticket Tirol</a>
-            <figure>
-                <!--<img src="images/attraction.jpg" alt="Blick auf Meer">
-                <figcaption><i class="fa-solid fa-camera-retro"></i>Meeresbilck aufgenommen in der Nähe von Napier (Quelle: <a href="https://pixabay.com/de/photos/neuseeland-napier-bluff-hill-lookout-3679340/">Pixabay</a>)</figcaption> -->
-            </figure>
             <h3><i class="fa-solid fa-map"></i>Übersichtskarte</h3>
             <div id="map"></div>
-            <div id ="pulldown">
-                <select>
-
-                </select>
+            <div id="pulldown">
+                <select></select>
             </div>
             <h3><i class="fa-solid fa-link"></i>Links</h3>
-            <!--<ul>
-                <li><a href="https://www.napier.govt.nz/">Website der Stadt Napier</a></li>
-                <li><a href="https://www.newzealand.com/de/napier/">Website Neuseeland</a></li>
-                <li><a href="https://www.stats.govt.nz/tools/2018-census-place-summaries/napier-city">Zensusdaten Napier</a></li>
-            </ul> -->
         </article>
     </main>
 
     <footer>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="./sommer/index.html">Sommer</a>
-            <a href="./winter/index.html">Winter</a>
-        </nav>
+        <!-- Optionaler Footer-Inhalt -->
     </footer>
 
 </body>
-
 </html>
