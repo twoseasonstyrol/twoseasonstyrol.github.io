@@ -57,7 +57,7 @@ L.control.rainviewer({
 
 
 async function loadSki(url) {
-    //console.log(url);
+    console.log(url);
     let response = await fetch(url);
     let jasondata = await response.json();
     L.geoJSON(jasondata, {
@@ -68,11 +68,19 @@ async function loadSki(url) {
             fillOpacity: 0.5,
         },
         onEachFeature: function (feature, layer) {
-            console.log(feature.properties);
-            //layer.bindPopup(`
-                //<h4>${feature.properties.NAME}</h4>
-                //<h4>${feature.properties.OBJECTID}</h4>
-            //`);
+            //console.log(feature.properties);
+            layer.bindPopup(`
+                <h4>${feature.properties.NAME}</h4>
+                <h4>${feature.properties.OPEN}</h4>
+                <h4>${feature.properties.ADDRESS}</h4>
+                <h4>${feature.properties.KONTAKT_TE}</h4>
+                <h4>${feature.properties.KONTAKT_EM}</h4>
+                <h4>${feature.properties.WEBLINK}</h4>
+                <h4>${feature.properties.SONSTIGE}</h4>
+                <h4>${feature.properties.ANZ_LIFT}</h4>
+                <h4>${feature.properties.ANZ_PISTEN}</h4>
+                <h4>${feature.properties.SAISON}</h4>
+            `);
         }
     }).addTo(overlays.ski);
 }
@@ -240,7 +248,7 @@ function getColor(value, ramp) {
 
 
 
-loadSki("winter/skigebiete.geojson");
+loadSki("skigebiete.geojson");
 loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
