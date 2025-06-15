@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300&family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
 
 body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e0f0ff; 
 }
 
 a {
@@ -20,7 +21,7 @@ main {
     margin: auto;
 }
 
-/* === NEU: Banner + Navigation Layout === */
+/* Banner u. Navigation Layout */
 
 .banner-header {
     position: relative;
@@ -49,16 +50,9 @@ main {
 .top-nav a {
     margin-left: 15px;
     font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
 }
 
-.top-nav i {
-    font-size: 1rem;
-}
-
-/* Titel links oben */
+/*Titel links oben */
 .logo {
     position: absolute;
     top: 20px;
@@ -66,34 +60,4 @@ main {
     z-index: 10;
     margin: 0;
     font-size: 1.8rem;
-}
-
-/* Zentrale Hauptüberschrift unter dem Banner */
-.main-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 40px auto 20px auto;
-    color: #333;
-    letter-spacing: 1px;
-}
-
-/* Optional für kleinere Screens */
-@media (max-width: 768px) {
-    .top-nav {
-        top: 10px;
-        right: 15px;
-        font-size: 0.9rem;
-    }
-
-    .logo {
-        top: 10px;
-        left: 15px;
-        font-size: 1.5rem;
-    }
-
-    .main-heading {
-        font-size: 2rem;
-        margin: 30px auto 15px auto;
-    }
 }
