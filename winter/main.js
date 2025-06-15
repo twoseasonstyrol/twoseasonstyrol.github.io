@@ -69,10 +69,10 @@ async function loadSki(url) {
         },
         onEachFeature: function (feature, layer) {
             console.log(feature.properties);
-            layer.bindPopup(`
-                <h4>${feature.properties.NAME}</h4>
-                <h4>${feature.properties.OBJECTID}</h4>
-            `);
+            //layer.bindPopup(`
+                //<h4>${feature.properties.NAME}</h4>
+                //<h4>${feature.properties.OBJECTID}</h4>
+            //`);
         }
     }).addTo(overlays.ski);
 }
@@ -240,7 +240,7 @@ function getColor(value, ramp) {
 
 
 
-loadSki("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/arcgis/rest/services/URP_Schigebietsgrenzen/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson");
+loadSki("winter/skigebiete.geojson");
 loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
