@@ -10,32 +10,23 @@ let map = L.map("map").setView([ibk.lat, ibk.lng], ibk.zoom);
 
 // thematische Layer
 let overlays = {
-    stations: L.featureGroup(),
     temperature: L.featureGroup(),
     wind: L.featureGroup(),
     snow: L.featureGroup(),
-    direction: L.featureGroup(),
     swim: L.featureGroup(),
     ski: L.featureGroup().addTo(map),
 }
 
 // Layer control
 L.control.layers({
-    "BasemapAT": L.tileLayer.provider('BasemapAT.basemap'),
-    "BasemapAT grau": L.tileLayer.provider('BasemapAT.grau').addTo(map),
-    "BasemapAT HighDPI": L.tileLayer.provider('BasemapAT.highdpi'),
-    "BasemapAT Orthofoto": L.tileLayer.provider('BasemapAT.orthofoto'),
-    "BasemapAT Overlay": L.tileLayer.provider('BasemapAT.overlay'),
-    "BasemapAT Terrain": L.tileLayer.provider('BasemapAT.terrain'),
-    "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface'),
+    "Openstreetmap": L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map),
+    "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
 }, {
     "Skigebiete": overlays.ski,
     "Schwimmbäder": overlays.swim,
-    "Wetterstationen": overlays.stations,
     "Temperatur": overlays.temperature,
     "Wind": overlays.wind,
     "Schneehöhe": overlays.snow,
-    "Windrichtung": overlays.direction,
 }).addTo(map);
 
 // Maßstab
@@ -57,7 +48,7 @@ L.control.rainviewer({
 
 
 async function loadSki(url) {
-    console.log(url);
+    //console.log(url);
     let response = await fetch(url);
     let jasondata = await response.json();
     L.geoJSON(jasondata, {
@@ -125,37 +116,10 @@ async function loadSwim(url) {
 
 // Wetterstationen
 async function loadStations(url) {
-    //console.log(url)
+    console.log(url)
     let response = await fetch(url);
     let jsondata = await response.json();
-    //console.log(jsondata);
-    L.geoJSON(jsondata, {
-        attribution: "Datenquelle: <a href='https://www.eea.europa.eu/en/datahub/'>EEA</a>",
-        pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, {
-                //icon: L.icon({
-                    //iconUrl: "icons/wifi.png",
-                    //iconAnchor: [16, 37],
-                    //popupAnchor: [0, -37],
-                //})
-            });
-        },
-        onEachFeature: function (feature, layer) {
-            let pointInTime = new Date(feature.properties.date);
-            //console.log(pointInTime);
-            //console.log(feature);
-            layer.bindPopup(`
-                <h4>${feature.properties.name} (${feature.geometry.coordinates[2]}m)</h4>
-                <ul>
-                    <li>Temperatur(°C) ${feature.properties.LT !== undefined ? feature.properties.LT : "-"}</li>
-                    <li>relative Feuchtigkeit(%) ${feature.properties.RH || "-"}</li>
-                    <li>Wind(km/h) ${feature.properties.WG || "-" }</li>
-                    <li>Schneehöhe(cm) ${feature.properties.HS || "-"}</li>
-                </ul>
-                <span>${pointInTime.toLocaleString()}</span>
-            `);
-        }
-    }).addTo(overlays.stations)
+    console.log(jsondata);
     showTemperature(jsondata);
     showWind(jsondata);
     showSnow(jsondata);
@@ -226,28 +190,6 @@ function showWind(jsondata) {
             })
         },
     }).addTo(overlays.snow);
-}
-
-// Funktion um die Windrichtung anzuzeigen
-function showDirect(jsondata) {
-    L.geoJSON(jsondata, {
-        filter: function (feature) {
-            //console.log(feature.properties)
-            if (feature.properties.WR > 0 && feature.properties.WR < 400) {
-                return true;
-            }
-
-        },
-        pointToLayer: function (feature, latlng){
-            let color = getColor(feature.properties.WG, COLORS.wind);
-            return L.marker(latlng,{
-                icon: L.divIcon({
-                    className: "aws-div-icon-wind",
-                    html: `<span > <i style="transform:rotate(${feature.properties.WR}deg); color:${color}"class="fa-solid fa-circle-arrow-down"></i></span>`,
-                })
-            })
-        },
-    }).addTo(overlays.direction);
 }
 
 // Funktion um die Farben zu bestimmen

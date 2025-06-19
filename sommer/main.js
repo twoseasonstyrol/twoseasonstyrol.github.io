@@ -10,11 +10,9 @@ let map = L.map("map").setView([ibk.lat, ibk.lng], ibk.zoom);
 
 // thematische Layer
 let overlays = {
-    stations: L.featureGroup(),
     temperature: L.featureGroup(),
     wind: L.featureGroup(),
     snow: L.featureGroup(),
-    direction: L.featureGroup(),
     lift: L.featureGroup(),
     swim: L.featureGroup().addTo(map),
 }
@@ -26,11 +24,8 @@ L.control.layers({
 }, {
     "Schwimmbäder": overlays.swim,
     "Lifte": overlays.lift,
-    "Wetterstationen": overlays.stations,
     "Temperatur": overlays.temperature,
     "Wind": overlays.wind,
-    "Schneehöhe": overlays.snow,
-    "Windrichtung": overlays.direction,
 }).addTo(map);
 
 // Maßstab
@@ -115,33 +110,6 @@ async function loadStations(url) {
     let response = await fetch(url);
     let jsondata = await response.json();
     //console.log(jsondata);
-    L.geoJSON(jsondata, {
-        attribution: "Datenquelle: <a href='https://www.eea.europa.eu/en/datahub/'>EEA</a>",
-        pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, {
-                //icon: L.icon({
-                    //iconUrl: "icons/wifi.png",
-                    //iconAnchor: [16, 37],
-                    //popupAnchor: [0, -37],
-                //})
-            });
-        },
-        onEachFeature: function (feature, layer) {
-            let pointInTime = new Date(feature.properties.date);
-            //console.log(pointInTime);
-            //console.log(feature);
-            layer.bindPopup(`
-                <h4>${feature.properties.name} (${feature.geometry.coordinates[2]}m)</h4>
-                <ul>
-                    <li>Temperatur(°C) ${feature.properties.LT !== undefined ? feature.properties.LT : "-"}</li>
-                    <li>relative Feuchtigkeit(%) ${feature.properties.RH || "-"}</li>
-                    <li>Wind(km/h) ${feature.properties.WG || "-" }</li>
-                    <li>Schneehöhe(cm) ${feature.properties.HS || "-"}</li>
-                </ul>
-                <span>${pointInTime.toLocaleString()}</span>
-            `);
-        }
-    }).addTo(overlays.stations)
     showTemperature(jsondata);
     showWind(jsondata);
     showSnow(jsondata);
