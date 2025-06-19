@@ -97,8 +97,9 @@ async function loadSwim(url) {
             fillOpacity: 0.5,
         },
         onEachFeature: function (feature, layer) {
-            console.log(feature.properties.ATTR_SCHWI);
-            layer.bindPopup(`
+            
+            //console.log(feature.properties.ATTR_SCHWI);
+            let popupContent = `
                 <h4>${feature.properties.OPEN}</h4>
                 <h4>${feature.properties.NAME}</h4>
                 <h4>${feature.properties.ADDRESS}</h4>
@@ -107,7 +108,14 @@ async function loadSwim(url) {
                 <h4>${feature.properties.WEBLINK}</h4>
                 <h4>${feature.properties.SAISON}</h4>
                 <h4>${feature.properties.SONSTIGE}</h4>
-            `);
+            `;
+
+            layer.bindPopup(popupContent);
+            /* KI_BEGIN */
+            let center = layer.getBounds().getCenter();
+            let marker = L.marker(center).addTo(overlays.swim);
+            marker.bindPopup(popupContent);
+            /* KI_ENDE */
         },
         filter: function(feature, layer) {
             return feature.properties.ATTR_SCHWI === "Halle";
