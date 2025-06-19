@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
 
+/* KI_BEGIN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* KI_END */
+
 body {
     font-family: "Open Sans", sans-serif;
 }
@@ -16,17 +25,41 @@ main {
 header {
     display: grid;
     grid-template-columns: 80% 20%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #111111;
 }
 
-header h2 {
-    margin: 0;
+.top-nav {
+    overflow: hidden;
 }
 
-header nav {
-    text-align: right;
-    font-size: 0.9em;
-    font-weight: bold;
-    padding-top: 1em;
+.top-nav a {
+    float: left;
+    color: #111111;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* KI_BEGIN */
+.top-nav a:hover {
+    background-color: #0074D9;
+    color: #FFFFFF;
+}
+
+/* KI_END */
+
+.top-nav a.active {
+    background-color: #FF851B;
+    color: #FFFFFF;
+}
+
+.top-nav a.active:hover {
+    color: #111111;
 }
 
 article {
