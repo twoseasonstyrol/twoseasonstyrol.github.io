@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
 
+/* KI_BEGIN */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* KI_END */
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -26,17 +28,14 @@ header {
     top: 0;
     z-index: 9999;  
     background-color: #FFFFFF; 
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #111111;
 }
 
-
-/* Add a black background color to the top navigation */
-.topnav {
+.top-nav {
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+.top-nav a {
   float: left;
   color: #111111;
   text-align: center;
@@ -45,19 +44,19 @@ header {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
+/* KI_BEGIN */
+.top-nav a:hover {
   background-color: #0074D9;
   color: #FFFFFF;
 }
+/* KI_END */
 
-/* Add a color to the active/current link */
-.topnav a.active {
+.top-nav a.active {
   background-color: #FF851B;
   color: #FFFFFF;
 }
 
-.topnav a.active:hover {
+.top-nav a.active:hover {
   color: #111111; /* Farbe beibehalten oder ändern */
 }
 
