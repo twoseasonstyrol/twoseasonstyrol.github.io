@@ -81,11 +81,9 @@ async function loadSwim(url) {
             `;
 
             layer.bindPopup(popupContent);
-            /* KI_BEGIN */
             let center = layer.getBounds().getCenter();
             let marker = L.marker(center).addTo(overlays.swim);
             marker.bindPopup(popupContent);
-            /* KI_ENDE */
         }
     }).addTo(overlays.swim);
 }
