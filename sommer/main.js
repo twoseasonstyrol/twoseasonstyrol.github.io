@@ -83,6 +83,7 @@ async function loadSwim(url) {
                 <h4>${feature.properties.WEBLINK}</h4>
                 <h4>${feature.properties.SAISON}</h4>
                 <h4>${feature.properties.SONSTIGE}</h4>
+                <a target="_blank" href="https://fahrplan.oebb.at/webapp/?start=yes&language=de_DE&" style="display:inline-block;"> <img alt="" src="https://fahrplan.oebb.at/webapp/img/light/customer/apple-touch-icon-72x72-precomposed.png"/> </a>
             `;
 
             layer.bindPopup(popupContent);
