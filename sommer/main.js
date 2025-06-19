@@ -21,13 +21,8 @@ let overlays = {
 
 // Layer control
 L.control.layers({
-    "BasemapAT": L.tileLayer.provider('BasemapAT.basemap'),
-    "BasemapAT grau": L.tileLayer.provider('BasemapAT.grau').addTo(map),
-    "BasemapAT HighDPI": L.tileLayer.provider('BasemapAT.highdpi'),
-    "BasemapAT Orthofoto": L.tileLayer.provider('BasemapAT.orthofoto'),
-    "BasemapAT Overlay": L.tileLayer.provider('BasemapAT.overlay'),
-    "BasemapAT Terrain": L.tileLayer.provider('BasemapAT.terrain'),
-    "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface'),
+    "Openstreetmap": L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map),
+    "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
 }, {
     "Schwimmbäder": overlays.swim,
     "Lifte": overlays.lift,

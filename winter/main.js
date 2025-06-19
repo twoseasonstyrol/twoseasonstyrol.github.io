@@ -21,21 +21,14 @@ let overlays = {
 
 // Layer control
 L.control.layers({
-    "BasemapAT": L.tileLayer.provider('BasemapAT.basemap'),
-    "BasemapAT grau": L.tileLayer.provider('BasemapAT.grau').addTo(map),
-    "BasemapAT HighDPI": L.tileLayer.provider('BasemapAT.highdpi'),
-    "BasemapAT Orthofoto": L.tileLayer.provider('BasemapAT.orthofoto'),
-    "BasemapAT Overlay": L.tileLayer.provider('BasemapAT.overlay'),
-    "BasemapAT Terrain": L.tileLayer.provider('BasemapAT.terrain'),
-    "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface'),
+    "Openstreetmap": L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map),
+    "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
 }, {
     "Skigebiete": overlays.ski,
     "Schwimmbäder": overlays.swim,
-    "Wetterstationen": overlays.stations,
     "Temperatur": overlays.temperature,
     "Wind": overlays.wind,
     "Schneehöhe": overlays.snow,
-    "Windrichtung": overlays.direction,
 }).addTo(map);
 
 // Maßstab
@@ -228,27 +221,6 @@ function showWind(jsondata) {
     }).addTo(overlays.snow);
 }
 
-// Funktion um die Windrichtung anzuzeigen
-function showDirect(jsondata) {
-    L.geoJSON(jsondata, {
-        filter: function (feature) {
-            //console.log(feature.properties)
-            if (feature.properties.WR > 0 && feature.properties.WR < 400) {
-                return true;
-            }
-
-        },
-        pointToLayer: function (feature, latlng){
-            let color = getColor(feature.properties.WG, COLORS.wind);
-            return L.marker(latlng,{
-                icon: L.divIcon({
-                    className: "aws-div-icon-wind",
-                    html: `<span > <i style="transform:rotate(${feature.properties.WR}deg); color:${color}"class="fa-solid fa-circle-arrow-down"></i></span>`,
-                })
-            })
-        },
-    }).addTo(overlays.direction);
-}
 
 // Funktion um die Farben zu bestimmen
 //console.log(COLORS);
