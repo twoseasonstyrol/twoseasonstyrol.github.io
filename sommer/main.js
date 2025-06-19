@@ -70,8 +70,14 @@ async function loadSwim(url) {
         onEachFeature: function (feature, layer) {
             //console.log(feature.properties);
             layer.bindPopup(`
-                <h4>${feature.properties.ANLAGE_NAME}</h4>
-                <h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
+                <h4>${feature.properties.OPEN}</h4>
+                <h4>${feature.properties.NAME}</h4>
+                <h4>${feature.properties.ADDRESS}</h4>
+                <h4>${feature.properties.KONTAKT_TE}</h4>
+                <h4>${feature.properties.KONTAKT_EM}</h4>
+                <h4>${feature.properties.WEBLINK}</h4>
+                <h4>${feature.properties.SAISON}</h4>
+                <h4>${feature.properties.SONSTIGE}</h4>
             `);
         }
     }).addTo(overlays.swim);
@@ -88,13 +94,17 @@ async function loadLift(url) {
             fillColor: "#00aaff",
             fillOpacity: 0.5,
         },
-        //onEachFeature: function (feature, layer) {
+        onEachFeature: function (feature, layer) {
             //console.log(feature.properties);
-            //layer.bindPopup(`
-                //<h4>${feature.properties.ANLAGE_NAME}</h4>
-                //<h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
-            //`);
-        //}
+            layer.bindPopup(`
+                <h4>${feature.properties.STAETTE_NA}</h4>
+                <h4>${feature.properties.OPEN}</h4>
+                <h4>${feature.properties.KONTAKT_TE}</h4>
+                <h4>${feature.properties.KONTAKT_EM}</h4>
+                <h4>${feature.properties.WEBLINK}</h4>
+                <h4>${feature.properties.SAISON}</h4>
+            `);
+        }
     }).addTo(overlays.lift);
 }
 
@@ -240,7 +250,7 @@ function getColor(value, ramp) {
 
 
 
-loadSwim("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/arcgis/rest/services/Schwimmanlagen/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson");
-loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
+loadSwim("swim.geojson");
+loadLift("lift.geojson");
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
