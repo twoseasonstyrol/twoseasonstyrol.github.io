@@ -15,7 +15,6 @@ let overlays = {
     wind: L.featureGroup(),
     snow: L.featureGroup(),
     direction: L.featureGroup(),
-    lift: L.featureGroup(),
     ski: L.featureGroup().addTo(map),
 }
 
@@ -30,7 +29,6 @@ L.control.layers({
     "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface'),
 }, {
     "Skigebiete": overlays.ski,
-    "Aufstiegshilfen": overlays.lift,
     "Wetterstationen": overlays.stations,
     "Temperatur": overlays.temperature,
     "Wind": overlays.wind,
@@ -85,26 +83,6 @@ async function loadSki(url) {
     }).addTo(overlays.ski);
 }
 
-async function loadLift(url) {
-    //console.log(url);
-    let response = await fetch(url);
-    let jasondata = await response.json();
-    L.geoJSON(jasondata, {
-        style: {
-            color: "#00aaff",
-            weight: 2,
-            fillColor: "#00aaff",
-            fillOpacity: 0.5,
-        },
-        //onEachFeature: function (feature, layer) {
-            //console.log(feature.properties);
-            //layer.bindPopup(`
-                //<h4>${feature.properties.ANLAGE_NAME}</h4>
-                //<h4>${feature.properties.ATTR_FREIBAD_HALLE}</h4>
-            //`);
-        //}
-    }).addTo(overlays.lift);
-}
 
 
 // Wetterstationen
@@ -249,6 +227,4 @@ function getColor(value, ramp) {
 
 
 loadSki("skigebiete.geojson");
-loadLift("https://services3.arcgis.com/hG7UfxX49PQ8XkXh/ArcGIS/rest/services/Aufstiegshilfen/FeatureServer/0?f=pjson")
-// Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
