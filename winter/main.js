@@ -97,7 +97,7 @@ async function loadSwim(url) {
             fillOpacity: 0.5,
         },
         onEachFeature: function (feature, layer) {
-            //console.log(feature.properties);
+            console.log(feature.properties.ATTR_SCHWI);
             layer.bindPopup(`
                 <h4>${feature.properties.OPEN}</h4>
                 <h4>${feature.properties.NAME}</h4>
@@ -110,7 +110,7 @@ async function loadSwim(url) {
             `);
         },
         filter: function(feature, layer) {
-            return feature.properties.ATTR_SCHWI === "Freibad";
+            return feature.properties.ATTR_SCHWI === "Halle";
         },
     }).addTo(overlays.swim);
 }
