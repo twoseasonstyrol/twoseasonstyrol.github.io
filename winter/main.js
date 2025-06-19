@@ -108,7 +108,10 @@ async function loadSwim(url) {
                 <h4>${feature.properties.SAISON}</h4>
                 <h4>${feature.properties.SONSTIGE}</h4>
             `);
-        }
+        },
+        filter: function(feature, layer) {
+            return feature.properties.ATTR_SCHWI === "Freibad";
+        },
     }).addTo(overlays.swim);
 }
 
