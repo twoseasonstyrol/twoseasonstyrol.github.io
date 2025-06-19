@@ -250,7 +250,7 @@ function getColor(value, ramp) {
 
 
 
-loadSwim("swim.geojson");
+loadSwim("../swim.geojson");
 loadLift("lifte.geojson");
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");

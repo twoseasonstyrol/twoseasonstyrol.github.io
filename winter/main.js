@@ -254,5 +254,5 @@ function getColor(value, ramp) {
 
 
 loadSki("skigebiete.geojson");
-loadSwim("swim.geojson");
+loadSwim("../swim.geojson");
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
