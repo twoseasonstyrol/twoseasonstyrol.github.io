@@ -15,6 +15,7 @@ let overlays = {
     wind: L.featureGroup(),
     snow: L.featureGroup(),
     direction: L.featureGroup(),
+    swim: L.featureGroup(),
     ski: L.featureGroup().addTo(map),
 }
 
@@ -29,6 +30,7 @@ L.control.layers({
     "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface'),
 }, {
     "Skigebiete": overlays.ski,
+    "Schwimmbäder": overlays.swim,
     "Wetterstationen": overlays.stations,
     "Temperatur": overlays.temperature,
     "Wind": overlays.wind,
@@ -83,7 +85,32 @@ async function loadSki(url) {
     }).addTo(overlays.ski);
 }
 
-
+async function loadSwim(url) {
+    //console.log(url);
+    let response = await fetch(url);
+    let jasondata = await response.json();
+    L.geoJSON(jasondata, {
+        style: {
+            color: "#00aaff",
+            weight: 2,
+            fillColor: "#00aaff",
+            fillOpacity: 0.5,
+        },
+        onEachFeature: function (feature, layer) {
+            //console.log(feature.properties);
+            layer.bindPopup(`
+                <h4>${feature.properties.OPEN}</h4>
+                <h4>${feature.properties.NAME}</h4>
+                <h4>${feature.properties.ADDRESS}</h4>
+                <h4>${feature.properties.KONTAKT_TE}</h4>
+                <h4>${feature.properties.KONTAKT_EM}</h4>
+                <h4>${feature.properties.WEBLINK}</h4>
+                <h4>${feature.properties.SAISON}</h4>
+                <h4>${feature.properties.SONSTIGE}</h4>
+            `);
+        }
+    }).addTo(overlays.swim);
+}
 
 // Wetterstationen
 async function loadStations(url) {
@@ -227,4 +254,5 @@ function getColor(value, ramp) {
 
 
 loadSki("skigebiete.geojson");
+loadSwim("swim.geojson");
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");

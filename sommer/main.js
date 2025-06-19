@@ -30,7 +30,7 @@ L.control.layers({
     "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface'),
 }, {
     "Schwimmbäder": overlays.swim,
-    "Aufstiegshilfen": overlays.lift,
+    "Lifte": overlays.lift,
     "Wetterstationen": overlays.stations,
     "Temperatur": overlays.temperature,
     "Wind": overlays.wind,
