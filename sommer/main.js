@@ -53,6 +53,14 @@ L.control.resetView({
     zoom: map.getZoom(),
 }).addTo(map);
 
+// Standort Control hinzufügen
+L.control.locate({
+    strings: {
+        title: "Eigenen Standort anzeigen",
+        drawCircle: false,
+    },
+}).addTo(map);
+
 async function loadSwim(url) {
     //console.log(url);
     let response = await fetch(url);

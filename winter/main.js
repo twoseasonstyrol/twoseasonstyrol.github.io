@@ -54,6 +54,14 @@ L.control.resetView({
     zoom: map.getZoom(),
 }).addTo(map);
 
+// Standort Control hinzufügen
+L.control.locate({
+    strings: {
+        title: "Eigenen Standort anzeigen",
+        drawCircle: false,
+    },
+}).addTo(map);
+
 async function loadSki(url) {
     //console.log(url);
     let response = await fetch(url);
@@ -129,8 +137,7 @@ async function loadStations(url) {
     console.log(jsondata);
     showTemperature(jsondata);
     showWind(jsondata);
-    showSnow(jsondata);
-    showDirect(jsondata);    
+    showSnow(jsondata);    
 
 }
 
