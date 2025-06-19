@@ -45,6 +45,13 @@ L.control.rainviewer({
     opacity: 0.5
 }).addTo(map);
 
+// Reset View
+L.control.resetView({
+    position: "topleft",
+    title: "Startview anzeigen",
+    latlng: map.getCenter(),
+    zoom: map.getZoom(),
+}).addTo(map);
 
 async function loadSwim(url) {
     //console.log(url);
@@ -91,18 +98,23 @@ async function loadLift(url) {
         },
         onEachFeature: function (feature, layer) {
             //console.log(feature.properties);
-            layer.bindPopup(`
+            let popupContent = `
                 <h4>${feature.properties.STAETTE_NA}</h4>
                 <h4>${feature.properties.OPEN}</h4>
                 <h4>${feature.properties.KONTAKT_TE}</h4>
                 <h4>${feature.properties.KONTAKT_EM}</h4>
                 <h4>${feature.properties.WEBLINK}</h4>
                 <h4>${feature.properties.SAISON}</h4>
-            `);
+            `;
+            layer.bindPopup(popupContent);
+            
+            let center = layer.getBounds().getCenter();
+            let marker = L.marker(center).addTo(overlays.lift);
+            marker.bindPopup(popupContent);
+
         }
     }).addTo(overlays.lift);
 }
-
 
 // Wetterstationen
 async function loadStations(url) {
@@ -111,12 +123,9 @@ async function loadStations(url) {
     let jsondata = await response.json();
     //console.log(jsondata);
     showTemperature(jsondata);
-    showWind(jsondata);
-    showSnow(jsondata);
-    showDirect(jsondata);    
+    showWind(jsondata);  
 
 }
-
 
 // Funktion um die Temperatur anzuzeigen
 function showTemperature(jsondata) {
@@ -140,7 +149,7 @@ function showTemperature(jsondata) {
 }
 
 // Funktion um die Windgeschwindigkeit anzuzeigen
-function showSnow(jsondata) {
+function showWind(jsondata) {
     L.geoJSON(jsondata, {
         filter: function (feature) {
             if (feature.properties.WG > 0 && feature.properties.WG < 150) {
@@ -158,50 +167,6 @@ function showSnow(jsondata) {
             })
         },
     }).addTo(overlays.wind);
-}
-
-// Funktion um die Schneehöhe anzuzeigen
-function showWind(jsondata) {
-    L.geoJSON(jsondata, {
-        filter: function (feature) {
-            //console.log(feature.properties)
-            if (feature.properties.HS > 0 && feature.properties.HS < 1000) {
-                return true;
-            }
-
-        },
-        pointToLayer: function (feature, latlng){
-            let color = getColor(feature.properties.HS, COLORS.snow);
-            return L.marker(latlng,{
-                icon: L.divIcon({
-                    className: "aws-div-icon-snow",
-                    html: `<span style="background-color:${color}"> ${feature.properties.HS.toFixed(1)}</span>`
-                })
-            })
-        },
-    }).addTo(overlays.snow);
-}
-
-// Funktion um die Windrichtung anzuzeigen
-function showDirect(jsondata) {
-    L.geoJSON(jsondata, {
-        filter: function (feature) {
-            //console.log(feature.properties)
-            if (feature.properties.WR > 0 && feature.properties.WR < 400) {
-                return true;
-            }
-
-        },
-        pointToLayer: function (feature, latlng){
-            let color = getColor(feature.properties.WG, COLORS.wind);
-            return L.marker(latlng,{
-                icon: L.divIcon({
-                    className: "aws-div-icon-wind",
-                    html: `<span > <i style="transform:rotate(${feature.properties.WR}deg); color:${color}"class="fa-solid fa-circle-arrow-down"></i></span>`,
-                })
-            })
-        },
-    }).addTo(overlays.direction);
 }
 
 // Funktion um die Farben zu bestimmen

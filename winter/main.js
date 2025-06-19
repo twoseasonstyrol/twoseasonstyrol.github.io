@@ -46,6 +46,13 @@ L.control.rainviewer({
     opacity: 0.5
 }).addTo(map);
 
+// Reset View
+L.control.resetView({
+    position: "topleft",
+    title: "Startview anzeigen",
+    latlng: map.getCenter(),
+    zoom: map.getZoom(),
+}).addTo(map);
 
 async function loadSki(url) {
     //console.log(url);
