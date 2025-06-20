@@ -14,8 +14,8 @@ let overlays = {
     wind: L.featureGroup(),
     snow: L.featureGroup(),
     swim: L.featureGroup(),
-    ski: L.featureGroup().addTo(map),
-    culture: L.featureGroup(),
+    ski: L.featureGroup(),
+    culture: L.featureGroup().addTo(map),
 }
 
 // Layer control
@@ -37,7 +37,7 @@ L.control.scale({
 }).addTo(map);
 
 // Rainviewer
-L.control.rainviewer({ 
+L.control.rainviewer({
     position: 'bottomleft',
     nextButtonText: '>',
     playStopButtonText: 'Play/Stop',
@@ -128,7 +128,7 @@ async function loadSwim(url) {
         },
 
         onEachFeature: function (feature, layer) {
-            
+
             console.log(feature.properties);
             let popupContent = `
                 <h2 class="title-name">${feature.properties.NAME}</h2>
@@ -164,10 +164,49 @@ async function loadSwim(url) {
             marker.bindPopup(popupContent);
             /* KI_ENDE */
         },
-        filter: function(feature, layer) {
+        filter: function (feature, layer) {
             return feature.properties.ATTR_SCHWI === "Halle";
         },
     }).addTo(overlays.swim);
+}
+
+// Funktion für Kunst und Kultur
+async function loadCulture(url) {
+    let response = await fetch(url);
+    let geojson = await response.json();
+    L.geoJSON(geojson, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: L.icon({
+                    iconUrl: '../icons/photo.png',
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            });
+        },
+        onEachFeature: function (feature, layer) {
+            console.log(feature.properties);
+            let popupContent = `
+                <h2 class="title-name">${feature.properties.Name}</h2>
+                <p>
+                    ${feature.properties.Anmerkung} <br>
+                    <div style="margin-top: 4px;"></div>
+                    Öffungzeiten: <br>
+                    <strong>${feature.properties.Zeiten.replaceAll(',', ';<br>')}</strong><br>
+                    Anzahl der Besuche: <strong>${feature.properties.Zutritts} </strong><br>
+                </p>
+                <h4 class="title-contact">Kontakt</h4>
+                <div class="text-popup">
+                <p class="contact-info">
+                    Adresse: ${feature.properties.Adresse}<br>
+                    Telefon: <a href="tel:${feature.properties.Tele}">${feature.properties.Tele}</a><br>
+                    <a href="${feature.properties.Website}"><strong>Homepage </strong></a>
+                </p>
+                </div>
+            `;
+            layer.bindPopup(popupContent);
+        }
+    }).addTo(overlays.culture);
 }
 
 // Wetterstationen
@@ -178,7 +217,7 @@ async function loadStations(url) {
     console.log(jsondata);
     showTemperature(jsondata);
     showWind(jsondata);
-    showSnow(jsondata);    
+    showSnow(jsondata);
 
 }
 
@@ -192,9 +231,9 @@ function showTemperature(jsondata) {
             }
 
         },
-        pointToLayer: function (feature, latlng){
+        pointToLayer: function (feature, latlng) {
             let color = getColor(feature.properties.LT, COLORS.temperature);
-            return L.marker(latlng,{
+            return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon",
                     html: `<span style="background-color:${color}; display: inline-flex; align-items: center;"><i class="fa-solid fa-temperature-three-quarters" style="margin-right: 4px;"></i>${feature.properties.LT.toFixed(1)}</span>`
@@ -213,9 +252,9 @@ function showWind(jsondata) {
             }
 
         },
-        pointToLayer: function (feature, latlng){
+        pointToLayer: function (feature, latlng) {
             let color = getColor(feature.properties.WG, COLORS.wind);
-            return L.marker(latlng,{
+            return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon-wind",
                     html: `<span style="background-color:${color}; display: inline-flex; align-items: center;"> <i class="fa-solid fa-wind" style="margin-right: 4px;"></i>${feature.properties.WG.toFixed(1)}</span>`
@@ -235,9 +274,9 @@ function showSnow(jsondata) {
             }
 
         },
-        pointToLayer: function (feature, latlng){
+        pointToLayer: function (feature, latlng) {
             let color = getColor(feature.properties.HS, COLORS.snow);
-            return L.marker(latlng,{
+            return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon-snow",
                     html: `<span style="background-color:${color}; display: inline-flex; align-items: center;"> <i class="fa-solid fa-snowflake" style="margin-right: 4px;"></i>${feature.properties.HS.toFixed(1)}</span>`
@@ -247,25 +286,6 @@ function showSnow(jsondata) {
     }).addTo(overlays.snow);
 }
 
-// Funktion für Kunst und Kultur
-async function loadCulture(url) {
-    let response = await fetch(url);
-    let geojson = await response.json();
-    L.geoJSON(geojson, {
-        pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, {
-                icon: L.icon({
-                    iconUrl: '../icons/photo.png',
-                    iconAnchor: [16, 37],
-                    popupAnchor: [0, -37],
-                })
-            });
-        },
-      onEachFeature: function (feature, layer) {
-            layer.bindPopup(`<b>${feature.properties.Name}</b><br>${feature.properties.Adresse}`);
-        }
-    }).addTo(overlays.culture);
-}
 
 // Funktion um die Farben zu bestimmen
 //console.log(COLORS);
@@ -274,7 +294,7 @@ function getColor(value, ramp) {
         if (value >= rule.min && value < rule.max) {
             return rule.color;
         }
-        
+
     }
 }
 
@@ -284,4 +304,4 @@ function getColor(value, ramp) {
 loadSki("skigebiete.geojson");
 loadSwim("../swim.geojson");
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
-loadCulture("../winter/kuk.geojson");
+loadCulture("../kuk.geojson");

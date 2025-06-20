@@ -179,7 +179,25 @@ async function loadCulture(url) {
             });
         },
       onEachFeature: function (feature, layer) {
-            layer.bindPopup(`<b>${feature.properties.Name}</b><br>${feature.properties.Adresse}`);
+        let popupContent = `
+                <h2 class="title-name">${feature.properties.Name}</h2>
+                <p>
+                    ${feature.properties.Anmerkung} <br>
+                    <div style="margin-top: 4px;"></div>
+                    Öffungzeiten: <br>
+                    <strong>${feature.properties.Zeiten.replaceAll(',', ';<br>')}</strong><br>
+                    Anzahl der Besuche: <strong>${feature.properties.Zutritts} </strong><br>
+                </p>
+                <h4 class="title-contact">Kontakt</h4>
+                <div class="text-popup">
+                <p class="contact-info">
+                    Adresse: ${feature.properties.Adresse}<br>
+                    Telefon: <a href="tel:${feature.properties.Tele}">${feature.properties.Tele}</a><br>
+                    <a href="${feature.properties.Website}"><strong>Homepage </strong></a>
+                </p>
+                </div>
+            `;
+            layer.bindPopup(popupContent);
         }
     }).addTo(overlays.culture);
 }
