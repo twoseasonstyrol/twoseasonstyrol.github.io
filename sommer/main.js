@@ -14,8 +14,8 @@ let overlays = {
     wind: L.featureGroup(),
     snow: L.featureGroup(),
     lift: L.featureGroup(),
-    swim: L.featureGroup().addTo(map),
-    culture: L.featureGroup(),
+    swim: L.featureGroup(),
+    culture: L.featureGroup().addTo(map),
 }
 
 // Layer control
@@ -219,7 +219,58 @@ function showWind(jsondata) {
 }
 
 // Funktion für Kunst und Kultur
+async function loadCulture(url) {
+    //console.log(url);
+    let response = await fetch(url);
+    let jasondata = await response.json();
+    L.geoJSON(jasondata, {
+        style: {
+            color: "#00aaff",
+            weight: 2,
+            fillColor: "#00aaff",
+            fillOpacity: 0.5,
+        },
+        onEachFeature: function (feature, layer) {
+            //console.log(feature.properties);
+            let popupContent = `
+                <h2 class="title-name">${feature.properties.NAME}</h2>
+                <p>
+                    ${feature.properties.ANMERKUNG} <br>
+                    <div style="margin-top: 4px;"></div>
+                    Öffungzeiten: <br>
+                    <strong>${feature.properties.ZEITEN.replaceAll(';', ';<br>')}</strong>
+                </p>
+                <h4 class="title-contact">Kontakt</h4>
+                <div class="text-popup">
+                <p class="contact-info">
+                    Adresse: ${feature.properties.ADRESSE}<br>
+                    Telefon: <a href="tel:${feature.properties.TELE}">${feature.properties.TELE}</a><br>
+                    <a href="${feature.properties.WEBSITE}"><strong>Homepage </strong></a>
+                </p>
+                </div>
+            `;
 
+            //layer.bindPopup(popupContent);
+            //let iconName;
+            //if (feature.properties.ATTR_SCHWI === "Halle") {
+            //    iconName = "swim_indoor2.png";
+            //} else {
+            //    iconName = "swim_frei2.png";
+            //}
+            
+            //console.log("Icon für Feature:", iconName);
+            let center = layer.getBounds().getCenter();
+            let marker = L.marker(center, {
+                icon: L.icon({
+                    iconUrl: `../icons/${iconName}`,
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            }).addTo(overlays.culture);
+            marker.bindPopup(popupContent);
+        }
+    }).addTo(overlays.culture);
+}
 
 // Funktion um die Farben zu bestimmen
 //console.log(COLORS);
@@ -239,3 +290,4 @@ loadSwim("../swim.geojson");
 loadLift("lifte.geojson");
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
+loadCulture("kuk.geojson");
