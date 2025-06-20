@@ -14,8 +14,8 @@ let overlays = {
     wind: L.featureGroup(),
     snow: L.featureGroup(),
     swim: L.featureGroup(),
-    ski: L.featureGroup(),
-    culture: L.featureGroup().addTo(map),
+    ski: L.featureGroup().addTo(map),
+    culture: L.featureGroup(),
 }
 
 // Layer control
@@ -23,7 +23,6 @@ L.control.layers({
     "Openstreetmap": L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map),
     "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
 }, {
-    "Kunst & Kultur": overlays.culture,
     "Skigebiete": overlays.ski,
     "Kunst & Kultur": overlays.culture,
     "Schwimmbäder": overlays.swim,
