@@ -79,7 +79,8 @@ async function loadSki(url) {
                 <h2 class="title-name">${feature.properties.NAME}</h2>
                 <p>                  
                     Letzte/Aktuelle Saison: <strong>${feature.properties.SAISON} </strong><br>
-                    Öffungzeiten: <strong>${feature.properties.OPEN} </strong><br>
+                    Öffungzeiten: <br>
+                        <strong>${feature.properties.OPEN.replaceAll(';', ';<br>')}</strong><br>
                     Anzahl der Lifte: <strong>${feature.properties.ANZ_LIFT} </strong><br>
                     Pistenkilometer: <strong>${feature.properties.ANZ_PISTEN} km </strong><br>                    
                     Sonstiges: <strong>${feature.properties.SONSTIGE} </strong>
@@ -126,16 +127,25 @@ async function loadSwim(url) {
 
         onEachFeature: function (feature, layer) {
             
-            //console.log(feature.properties.ATTR_SCHWI);
+            console.log(feature.properties);
             let popupContent = `
-                <h4>${feature.properties.OPEN}</h4>
-                <h4>${feature.properties.NAME}</h4>
-                <h4>${feature.properties.ADDRESS}</h4>
-                <h4>${feature.properties.KONTAKT_TE}</h4>
-                <h4>${feature.properties.KONTAKT_EM}</h4>
-                <h4>${feature.properties.WEBLINK}</h4>
-                <h4>${feature.properties.SAISON}</h4>
-                <h4>${feature.properties.SONSTIGE}</h4>
+                <h2 class="title-name">${feature.properties.NAME}</h2>
+                <p>
+                    ${feature.properties.SONSTIGE} <br>
+                    <div style="margin-top: 4px;"></div>
+                    Saison: <strong>${feature.properties.SAISON} </strong><br>
+                    Öffungzeiten: <br>
+                    <strong>${feature.properties.OPEN.replaceAll(';', ';<br>')}</strong>
+                </p>
+                <h4 class="title-contact">Kontakt</h4>
+                <div class="text-popup">
+                <p class="contact-info">
+                    Adresse: ${feature.properties.ADDRESS}<br>
+                    Telefon: <a href="tel:${feature.properties.KONTAKT_TE}">${feature.properties.KONTAKT_TE}</a><br>
+                    E-Mail: <a href="mailto:${feature.properties.KONTAKT_EM}">${feature.properties.KONTAKT_EM}</a><br>
+                    <a href="${feature.properties.WEBLINK}"><strong>Homepage </strong></a>
+                </p>
+                </div>
             `;
 
             layer.bindPopup(popupContent);
