@@ -90,7 +90,7 @@ async function loadSki(url) {
             layer.bindPopup(popupContent);
             /* KI_BEGIN */
             let center = layer.getBounds().getCenter();
-            let marker = L.marker(center).addTo(overlays.swim);
+            let marker = L.marker(center).addTo(overlays.ski);
             marker.bindPopup(popupContent);
             /* KI_ENDE */
         }
@@ -108,6 +108,7 @@ async function loadSwim(url) {
             fillColor: "#00aaff",
             fillOpacity: 0.5,
         },
+
         onEachFeature: function (feature, layer) {
             
             //console.log(feature.properties.ATTR_SCHWI);
@@ -127,7 +128,7 @@ async function loadSwim(url) {
             let center = layer.getBounds().getCenter();
             let marker = L.marker(center, {
                 icon: L.icon({
-                    iconUrl: `icons/swimming_frei_1.png`,
+                    iconUrl: `../icons/swim_indoor_2.png`,
                     iconAnchor: [16, 37],
                     popupAnchor: [0, -37],
                 })
