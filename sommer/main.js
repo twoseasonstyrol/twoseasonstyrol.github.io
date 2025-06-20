@@ -34,7 +34,7 @@ L.control.scale({
 }).addTo(map);
 
 // Rainviewer
-L.control.rainviewer({ 
+L.control.rainviewer({
     position: 'bottomleft',
     nextButtonText: '>',
     playStopButtonText: 'Play/Stop',
@@ -145,11 +145,11 @@ async function loadLift(url) {
                 </p>
                 </div>
             `;
-            
+
             layer.bindPopup(popupContent);
-            
+
             let center = layer.getBounds().getCenter();
-            let marker = L.marker(center,{
+            let marker = L.marker(center, {
                 icon: L.icon({
                     iconUrl: `../icons/cablecar2.png`,
                     iconAnchor: [16, 37],
@@ -169,7 +169,7 @@ async function loadStations(url) {
     let jsondata = await response.json();
     //console.log(jsondata);
     showTemperature(jsondata);
-    showWind(jsondata);  
+    showWind(jsondata);
 
 }
 
@@ -183,12 +183,14 @@ function showTemperature(jsondata) {
             }
 
         },
-        pointToLayer: function (feature, latlng){
+        pointToLayer: function (feature, latlng) {
             let color = getColor(feature.properties.LT, COLORS.temperature);
-            return L.marker(latlng,{
+            return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon",
-                    html: `<span style="background-color:${color}"> ${feature.properties.LT.toFixed(1)}</span>`
+                    //KI BEGINN
+                    html: `<span style="background-color:${color}; display: inline-flex; align-items: center;"><i class="fa-solid fa-temperature-three-quarters" style="margin-right: 4px;"></i>${feature.properties.LT.toFixed(1)}</span>`
+                    //KI ENDE
                 })
             })
         },
@@ -204,12 +206,12 @@ function showWind(jsondata) {
             }
 
         },
-        pointToLayer: function (feature, latlng){
+        pointToLayer: function (feature, latlng) {
             let color = getColor(feature.properties.WG, COLORS.wind);
-            return L.marker(latlng,{
+            return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon-wind",
-                    html: `<span style="background-color:${color}"> ${feature.properties.WG.toFixed(1)}</span>`
+                    html: `<span style="background-color:${color}; display: inline-flex; align-items: center;"> <i class="fa-solid fa-wind" style="margin-right: 4px;"></i>${feature.properties.WG.toFixed(1)}</span>`
                 })
             })
         },
@@ -223,7 +225,7 @@ function getColor(value, ramp) {
         if (value >= rule.min && value < rule.max) {
             return rule.color;
         }
-        
+
     }
 }
 
