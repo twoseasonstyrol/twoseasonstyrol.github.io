@@ -24,6 +24,7 @@ L.control.layers({
     "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
 }, {
     "Skigebiete": overlays.ski,
+    "Kunst & Kultur": overlays.culture,
     "Schwimmbäder": overlays.swim,
     "Schneehöhe (cm)": overlays.snow,
     "Temperatur (°C)": overlays.temperature,
