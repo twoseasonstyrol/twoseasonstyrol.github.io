@@ -68,9 +68,9 @@ async function loadSki(url) {
     let jasondata = await response.json();
     L.geoJSON(jasondata, {
         style: {
-            color: "#00aaff",
+            color: "#0074D9",
             weight: 2,
-            fillColor: "#00aaff",
+            fillColor: "#0074D9",
             fillOpacity: 0.5,
         },
         onEachFeature: function (feature, layer) {
@@ -92,7 +92,7 @@ async function loadSki(url) {
             let center = layer.getBounds().getCenter();
             let marker = L.marker(center, {
                 icon: L.icon({
-                    iconUrl: `../icons/skiing_2.png`,
+                    iconUrl: `../icons/skiing2.png`,
                     iconAnchor: [16, 37],
                     popupAnchor: [0, -37],
                 })
@@ -135,7 +135,7 @@ async function loadSwim(url) {
             let center = layer.getBounds().getCenter();
             let marker = L.marker(center, {
                 icon: L.icon({
-                    iconUrl: `../icons/swim_indoor_2.png`,
+                    iconUrl: `../icons/swim_indoor2.png`,
                     iconAnchor: [16, 37],
                     popupAnchor: [0, -37],
                 })

@@ -88,9 +88,9 @@ async function loadSwim(url) {
             layer.bindPopup(popupContent);
             let iconName;
             if (feature.properties.ATTR_SCHWI === "Halle") {
-                iconName = "swim_indoor_2.png";
+                iconName = "swim_indoor2.png";
             } else {
-                iconName = "swim_frei_2.png";
+                iconName = "swim_frei2.png";
             }
             //console.log("Icon für Feature:", iconName);
             let center = layer.getBounds().getCenter();
