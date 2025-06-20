@@ -62,6 +62,8 @@ header {
 .banner-image {
     height: auto; 
     width: auto;
+    background-size: cover; 
+    background-position: center; 
     max-width: 100%;
-    max-height: 400px;
+    max-height: 300px;
 }
