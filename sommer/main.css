@@ -22,6 +22,16 @@ main {
     margin: auto;
 }
 
+h1 {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #0074D9;
+    font-size: 80px;
+    text-align: center;
+    margin: 0;
+}
+
+
 header {
     display: grid;
     grid-template-columns: 80% 20%;

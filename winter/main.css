@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
 
 /* KI_BEGIN */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 /* KI_END */
 
 body {
@@ -22,49 +23,53 @@ main {
 }
 
 h1 {
-  font-family: monospace;     /* feste Schriftart */
-  text-transform: uppercase;  /* nur Großbuchstaben */
-  color: orange;              /* Textfarbe */
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #0074D9;
+    font-size: 80px;
+    text-align: center;
+    margin: 0;
 }
 
 
 header {
     display: grid;
     grid-template-columns: 80% 20%;
-    position:sticky;
+    position: sticky;
     top: 0;
-    z-index: 9999;  
-    background-color: #FFFFFF; 
+    z-index: 9999;
+    background-color: #FFFFFF;
     border-bottom: 2px solid #111111;
 }
 
 .top-nav {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .top-nav a {
-  float: left;
-  color: #111111;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    float: left;
+    color: #111111;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 /* KI_BEGIN */
 .top-nav a:hover {
-  background-color: #0074D9;
-  color: #FFFFFF;
+    background-color: #0074D9;
+    color: #FFFFFF;
 }
+
 /* KI_END */
 
 .top-nav a.active {
-  background-color: #FF851B;
-  color: #FFFFFF;
+    background-color: #FF851B;
+    color: #FFFFFF;
 }
 
 .top-nav a.active:hover {
-  color: #111111; 
+    color: #111111;
 }
 
 
