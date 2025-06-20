@@ -23,6 +23,7 @@ L.control.layers({
     "Openstreetmap": L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map),
     "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
 }, {
+    "Kunst & Kultur": overlays.culture,
     "Skigebiete": overlays.ski,
     "Kunst & Kultur": overlays.culture,
     "Schwimmbäder": overlays.swim,
