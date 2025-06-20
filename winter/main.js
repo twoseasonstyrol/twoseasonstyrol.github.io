@@ -14,7 +14,8 @@ let overlays = {
     wind: L.featureGroup(),
     snow: L.featureGroup(),
     swim: L.featureGroup(),
-    ski: L.featureGroup().addTo(map),
+    ski: L.featureGroup(),
+    culture: L.featureGroup().addTo(map),
 }
 
 // Layer control
@@ -245,6 +246,26 @@ function showSnow(jsondata) {
     }).addTo(overlays.snow);
 }
 
+// Funktion für Kunst und Kultur
+async function loadCulture(url) {
+    let response = await fetch(url);
+    let geojson = await response.json();
+    L.geoJSON(geojson, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: L.icon({
+                    iconUrl: '../icons/photo.png',
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            });
+        },
+      onEachFeature: function (feature, layer) {
+            layer.bindPopup(`<b>${feature.properties.Name}</b><br>${feature.properties.Adresse}`);
+        }
+    }).addTo(overlays.culture);
+}
+
 // Funktion um die Farben zu bestimmen
 //console.log(COLORS);
 function getColor(value, ramp) {
@@ -262,3 +283,4 @@ function getColor(value, ramp) {
 loadSki("skigebiete.geojson");
 loadSwim("../swim.geojson");
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
+loadCulture("../winter/kuk.geojson");
