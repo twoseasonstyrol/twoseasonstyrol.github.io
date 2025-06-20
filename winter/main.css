@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 /* KI_BEGIN */
 * {
@@ -20,6 +20,13 @@ main {
     max-width: 1200px;
     margin: auto;
 }
+
+h1 {
+  font-family: monospace;     /* feste Schriftart */
+  text-transform: uppercase;  /* nur Großbuchstaben */
+  color: orange;              /* Textfarbe */
+}
+
 
 header {
     display: grid;
