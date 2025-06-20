@@ -111,3 +111,33 @@ footer {
 footer nav {
     display: inline-block;
 }
+
+.aws-div-icon span{
+    font-size: 1em;
+    color: #111111;
+    font-weight: bold;
+    padding: 0.3em;
+    transform: translate(-30%, -50%);
+    display: inline-block;
+    border-radius: 0.5em;
+    }
+
+.aws-div-icon-wind span{
+    font-size: 1em;
+    color: #111111;
+    font-weight: bold;
+    padding: 0.3em;
+    transform: translate(-30%, -50%);
+    display: inline-block;
+    border-radius: 0.5em;
+}
+
+.aws-div-icon-snow span{
+    font-size: 1em;
+    color: #111111;
+    font-weight: bold;
+    padding: 0.3em;
+    transform: translate(-30%, -50%);
+    display: inline-block;
+    border-radius: 0.5em;
+}

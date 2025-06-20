@@ -24,9 +24,9 @@ L.control.layers({
 }, {
     "Skigebiete": overlays.ski,
     "Schwimmbäder": overlays.swim,
-    "Temperatur": overlays.temperature,
-    "Wind": overlays.wind,
-    "Schneehöhe": overlays.snow,
+    "Schneehöhe (cm)": overlays.snow,
+    "Temperatur (°C)": overlays.temperature,
+    "Wind (km/h)": overlays.wind,
 }).addTo(map);
 
 // Maßstab
@@ -195,7 +195,7 @@ function showTemperature(jsondata) {
             return L.marker(latlng,{
                 icon: L.divIcon({
                     className: "aws-div-icon",
-                    html: `<span style="background-color:${color}"> ${feature.properties.LT.toFixed(1)}</span>`
+                    html: `<span style="background-color:${color}; display: inline-flex; align-items: center;"><i class="fa-solid fa-temperature-three-quarters" style="margin-right: 4px;"></i>${feature.properties.LT.toFixed(1)}</span>`
                 })
             })
         },
@@ -203,7 +203,7 @@ function showTemperature(jsondata) {
 }
 
 // Funktion um die Windgeschwindigkeit anzuzeigen
-function showSnow(jsondata) {
+function showWind(jsondata) {
     L.geoJSON(jsondata, {
         filter: function (feature) {
             if (feature.properties.WG > 0 && feature.properties.WG < 150) {
@@ -216,7 +216,7 @@ function showSnow(jsondata) {
             return L.marker(latlng,{
                 icon: L.divIcon({
                     className: "aws-div-icon-wind",
-                    html: `<span style="background-color:${color}"> ${feature.properties.WG.toFixed(1)}</span>`
+                    html: `<span style="background-color:${color}; display: inline-flex; align-items: center;"> <i class="fa-solid fa-wind" style="margin-right: 4px;"></i>${feature.properties.WG.toFixed(1)}</span>`
                 })
             })
         },
@@ -224,7 +224,7 @@ function showSnow(jsondata) {
 }
 
 // Funktion um die Schneehöhe anzuzeigen
-function showWind(jsondata) {
+function showSnow(jsondata) {
     L.geoJSON(jsondata, {
         filter: function (feature) {
             //console.log(feature.properties)
@@ -238,7 +238,7 @@ function showWind(jsondata) {
             return L.marker(latlng,{
                 icon: L.divIcon({
                     className: "aws-div-icon-snow",
-                    html: `<span style="background-color:${color}"> ${feature.properties.HS.toFixed(1)}</span>`
+                    html: `<span style="background-color:${color}; display: inline-flex; align-items: center;"> <i class="fa-solid fa-snowflake" style="margin-right: 4px;"></i>${feature.properties.HS.toFixed(1)}</span>`
                 })
             })
         },

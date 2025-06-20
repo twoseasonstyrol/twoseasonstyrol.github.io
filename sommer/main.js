@@ -23,11 +23,11 @@ L.control.layers({
     "Openstreetmap": L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map),
     "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
 }, {
+    "Kunst & Kultur": overlays.culture,
     "Schwimmbäder": overlays.swim,
     "Lifte": overlays.lift,
     "Temperatur (°C)": overlays.temperature,
     "Wind (km/h)": overlays.wind,
-    "Kunst & Kultur": overlays.culture,
 }).addTo(map);
 
 // Maßstab
