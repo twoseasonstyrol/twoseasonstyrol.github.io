@@ -75,7 +75,7 @@ async function loadSki(url) {
         },
         onEachFeature: function (feature, layer) {
             //console.log(feature.properties);
-            layer.bindPopup(`
+            let popupContent = `
                 <h4>${feature.properties.NAME}</h4>
                 <h4>${feature.properties.OPEN}</h4>
                 <h4>${feature.properties.ADDRESS}</h4>
@@ -86,7 +86,13 @@ async function loadSki(url) {
                 <h4>${feature.properties.ANZ_LIFT}</h4>
                 <h4>${feature.properties.ANZ_PISTEN}</h4>
                 <h4>${feature.properties.SAISON}</h4>
-            `);
+            `;
+            layer.bindPopup(popupContent);
+            /* KI_BEGIN */
+            let center = layer.getBounds().getCenter();
+            let marker = L.marker(center).addTo(overlays.swim);
+            marker.bindPopup(popupContent);
+            /* KI_ENDE */
         }
     }).addTo(overlays.ski);
 }
@@ -119,7 +125,13 @@ async function loadSwim(url) {
             layer.bindPopup(popupContent);
             /* KI_BEGIN */
             let center = layer.getBounds().getCenter();
-            let marker = L.marker(center).addTo(overlays.swim);
+            let marker = L.marker(center, {
+                icon: L.icon({
+                    iconUrl: `icons/swimming_frei_1.png`,
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            }).addTo(overlays.swim);
             marker.bindPopup(popupContent);
             /* KI_ENDE */
         },
