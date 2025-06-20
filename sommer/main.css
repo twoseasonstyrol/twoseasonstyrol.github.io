@@ -31,6 +31,24 @@ h1 {
     margin: 0;
 }
 
+.title-name {
+    text-align: center;
+    color: #FF851B;
+}
+
+.title-contact {
+    text-align: center;
+    font-size: 80%;
+}
+
+.text-popup p {
+    margin-top: 0.3em;
+    text-align: center;
+}
+.contact-info {
+  font-size: 80%;
+  line-height: 1.4;
+}
 
 header {
     display: grid;
@@ -90,4 +108,24 @@ footer {
 
 footer nav {
     display: inline-block;
+}
+
+.aws-div-icon span{
+    font-size: 1em;
+    color: #111111;
+    font-weight: bold;
+    padding: 0.3em;
+    transform: translate(-30%, -50%);
+    display: inline-block;
+    border-radius: 0.5em;
+    }
+
+.aws-div-icon-wind span{
+    font-size: 1em;
+    color: #111111;
+    font-weight: bold;
+    padding: 0.3em;
+    transform: translate(-30%, -50%);
+    display: inline-block;
+    border-radius: 0.5em;
 }
