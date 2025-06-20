@@ -30,9 +30,23 @@ h1 {
     text-align: center;
     margin: 0;
 }
+.title-name {
+    text-align: center;
+    color: #0074D9;
+}
+
+.title-contact {
+    text-align: center;
+    font-size: 80%;
+}
 
 .text-popup p {
     margin-top: 0.3em;
+    text-align: center;
+}
+.contact-info {
+  font-size: 80%;
+  line-height: 1.4;
 }
 
 

@@ -76,8 +76,8 @@ async function loadSki(url) {
         onEachFeature: function (feature, layer) {
             //console.log(feature.properties);
             let popupContent = `
-                <h3>${feature.properties.NAME}</h3>
-                <p class="text-popup">                  
+                <h2 class="title-name">${feature.properties.NAME}</h2>
+                <p>                  
                     Letzte/Aktuelle Saison: <strong>${feature.properties.SAISON} </strong><br>
                     Öffungzeiten: <strong>${feature.properties.OPEN} </strong><br>
                     Anzahl der Lifte: <strong>${feature.properties.ANZ_LIFT} </strong><br>
@@ -86,7 +86,7 @@ async function loadSki(url) {
                 </p>
                 <h4 class="title-contact">Kontakt</h4>
                 <div class="text-popup">
-                <p>
+                <p class="contact-info">
                     Adresse: ${feature.properties.ADDRESS}<br>
                     Telefon: <a href="tel:${feature.properties.KONTAKT_TE}">${feature.properties.KONTAKT_TE}</a><br>
                     E-Mail: <a href="mailto:${feature.properties.KONTAKT_EM}">${feature.properties.KONTAKT_EM}</a><br>
