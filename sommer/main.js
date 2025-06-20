@@ -24,8 +24,8 @@ L.control.layers({
 }, {
     "Schwimmbäder": overlays.swim,
     "Lifte": overlays.lift,
-    "Temperatur": overlays.temperature,
-    "Wind": overlays.wind,
+    "Temperatur (°C)": overlays.temperature,
+    "Wind (km/h)": overlays.wind,
 }).addTo(map);
 
 // Maßstab
@@ -127,15 +127,25 @@ async function loadLift(url) {
             fillOpacity: 0.5,
         },
         onEachFeature: function (feature, layer) {
-            //console.log(feature.properties);
             let popupContent = `
-                <h4>${feature.properties.STAETTE_NA}</h4>
-                <h4>${feature.properties.OPEN}</h4>
-                <h4>${feature.properties.KONTAKT_TE}</h4>
-                <h4>${feature.properties.KONTAKT_EM}</h4>
-                <h4>${feature.properties.WEBLINK}</h4>
-                <h4>${feature.properties.SAISON}</h4>
+                <h2 class="title-name">${feature.properties.STAETTE_NA}</h2>
+                <p>                  
+                    Erholungsgebiet: <strong>${feature.properties.ANLAGE_NAM} </strong><br>
+                    Letzte/Aktuelle Saison: <strong>${feature.properties.SAISON} </strong><br>
+                    Öffungzeiten: <br>
+                        <strong>${feature.properties.OPEN.replaceAll(';', ';<br>')}</strong><br>                 
+                    Sonstiges: <strong>${feature.properties.SONSTIGE} </strong>
+                </p>
+                <h4 class="title-contact">Kontakt</h4>
+                <div class="text-popup">
+                <p class="contact-info">
+                    Telefon: <a href="tel:${feature.properties.KONTAKT_TE}">${feature.properties.KONTAKT_TE}</a><br>
+                    E-Mail: <a href="mailto:${feature.properties.KONTAKT_EM}">${feature.properties.KONTAKT_EM}</a><br>
+                    <a href="${feature.properties.WEBLINK}"><strong>Homepage </strong></a>
+                </p>
+                </div>
             `;
+            
             layer.bindPopup(popupContent);
             
             let center = layer.getBounds().getCenter();
@@ -165,6 +175,7 @@ async function loadStations(url) {
 
 // Funktion um die Temperatur anzuzeigen
 function showTemperature(jsondata) {
+    console.log(jsondata);
     L.geoJSON(jsondata, {
         filter: function (feature) {
             if (feature.properties.LT > -50 && feature.properties.LT < 50) {
