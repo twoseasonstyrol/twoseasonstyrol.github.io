@@ -15,6 +15,7 @@ let overlays = {
     snow: L.featureGroup(),
     lift: L.featureGroup(),
     swim: L.featureGroup().addTo(map),
+    culture: L.featureGroup(),
 }
 
 // Layer control
@@ -26,6 +27,7 @@ L.control.layers({
     "Lifte": overlays.lift,
     "Temperatur (°C)": overlays.temperature,
     "Wind (km/h)": overlays.wind,
+    "Kunst & Kultur": overlays.culture,
 }).addTo(map);
 
 // Maßstab
@@ -215,6 +217,9 @@ function showWind(jsondata) {
         },
     }).addTo(overlays.wind);
 }
+
+// Funktion für Kunst und Kultur
+
 
 // Funktion um die Farben zu bestimmen
 //console.log(COLORS);
