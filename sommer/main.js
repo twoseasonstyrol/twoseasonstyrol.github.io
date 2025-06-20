@@ -257,12 +257,12 @@ async function loadCulture(url) {
             //} else {
             //    iconName = "swim_frei2.png";
             //}
-            
+
             //console.log("Icon für Feature:", iconName);
             let center = layer.getBounds().getCenter();
             let marker = L.marker(center, {
                 icon: L.icon({
-                    iconUrl: `../icons/${iconName}`,
+                    iconUrl: `../icons/photo.png`,
                     iconAnchor: [16, 37],
                     popupAnchor: [0, -37],
                 })
