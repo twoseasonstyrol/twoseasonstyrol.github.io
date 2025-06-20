@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://fahrplan.oebb.at/webapp/staticfiles/hafas-widget-core.1.0.0.js?language=de_DE"></script>
 
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -48,7 +50,7 @@
                 unvergessliche Wanderungen oder
                 interessante Museen - dein Freizeitkompass zeigt dir den Weg zum nächsten Abenteuer.</p>
             <p>Text</p>
-            <a href="https://www.freizeitticket.at/">Quelle: Freizeitticket Tirol</a>
+            <div data-hfs-widget="true" data-hfs-widget-cfg-colorscheme="light" data-hfs-widget-tp="true" data-hfs-widget-tp-postform="newtab" data-hfs-widget-tp-displaymode="query" data-hfs-widget-tp-autosearch="true"></div>            <a href="https://www.freizeitticket.at/">Quelle: Freizeitticket Tirol</a>
             <h3><i class="fa-solid fa-map"></i>Übersichtskarte</h3>
             <div id="map"></div>
             <div id="pulldown">
@@ -57,10 +59,6 @@
             <h3><i class="fa-solid fa-link"></i>Links</h3>
         </article>
     </main>
-
-    <a target="_blank" href="https://fahrplan.oebb.at/webapp/?start=yes&language=de_DE&" style="display:inline-block;">
-        <img alt="" src="https://fahrplan.oebb.at/webapp/img/light/customer/apple-touch-icon-72x72-precomposed.png" />
-    </a>
 
     <footer>
         <!-- Optionaler Footer-Inhalt -->
