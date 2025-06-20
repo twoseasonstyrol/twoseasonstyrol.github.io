@@ -164,6 +164,26 @@ async function loadLift(url) {
     }).addTo(overlays.lift);
 }
 
+// Funktion für Kunst und Kultur
+async function loadCulture(url) {
+    let response = await fetch(url);
+    let geojson = await response.json();
+    L.geoJSON(geojson, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: L.icon({
+                    iconUrl: '../icons/photo.png',
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            });
+        },
+      onEachFeature: function (feature, layer) {
+            layer.bindPopup(`<b>${feature.properties.Name}</b><br>${feature.properties.Adresse}`);
+        }
+    }).addTo(overlays.culture);
+}
+
 // Wetterstationen
 async function loadStations(url) {
     //console.log(url)
@@ -219,27 +239,6 @@ function showWind(jsondata) {
         },
     }).addTo(overlays.wind);
 }
-
-// Funktion für Kunst und Kultur
-async function loadCulture(url) {
-    let response = await fetch(url);
-    let geojson = await response.json();
-    L.geoJSON(geojson, {
-        pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, {
-                icon: L.icon({
-                    iconUrl: '../icons/photo.png',
-                    iconAnchor: [16, 37],
-                    popupAnchor: [0, -37],
-                })
-            });
-        },
-      onEachFeature: function (feature, layer) {
-            layer.bindPopup(`<b>${feature.properties.Name}</b><br>${feature.properties.Adresse}`);
-        }
-    }).addTo(overlays.culture);
-}
-
 // Funktion um die Farben zu bestimmen
 //console.log(COLORS);
 function getColor(value, ramp) {
@@ -257,5 +256,5 @@ loadSwim("../swim.geojson");
 loadLift("lifte.geojson");
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
-loadCulture("../sommer/kuk.geojson");
+loadCulture("../kuk.geojson");
 
