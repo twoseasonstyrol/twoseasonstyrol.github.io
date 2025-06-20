@@ -90,7 +90,13 @@ async function loadSki(url) {
             layer.bindPopup(popupContent);
             /* KI_BEGIN */
             let center = layer.getBounds().getCenter();
-            let marker = L.marker(center).addTo(overlays.ski);
+            let marker = L.marker(center, {
+                icon: L.icon({
+                    iconUrl: `../icons/skiing_2.png`,
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            }).addTo(overlays.ski);
             marker.bindPopup(popupContent);
             /* KI_ENDE */
         }
