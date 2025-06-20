@@ -220,54 +220,20 @@ function showWind(jsondata) {
 
 // Funktion für Kunst und Kultur
 async function loadCulture(url) {
-    //console.log(url);
     let response = await fetch(url);
-    let jasondata = await response.json();
-    L.geoJSON(jasondata, {
-        style: {
-            color: "#00aaff",
-            weight: 2,
-            fillColor: "#00aaff",
-            fillOpacity: 0.5,
-        },
-        onEachFeature: function (feature, layer) {
-            //console.log(feature.properties);
-            let popupContent = `
-                <h2 class="title-name">${feature.properties.NAME}</h2>
-                <p>
-                    ${feature.properties.ANMERKUNG} <br>
-                    <div style="margin-top: 4px;"></div>
-                    Öffungzeiten: <br>
-                    <strong>${feature.properties.ZEITEN.replaceAll(';', ';<br>')}</strong>
-                </p>
-                <h4 class="title-contact">Kontakt</h4>
-                <div class="text-popup">
-                <p class="contact-info">
-                    Adresse: ${feature.properties.ADRESSE}<br>
-                    Telefon: <a href="tel:${feature.properties.TELE}">${feature.properties.TELE}</a><br>
-                    <a href="${feature.properties.WEBSITE}"><strong>Homepage </strong></a>
-                </p>
-                </div>
-            `;
-
-            //layer.bindPopup(popupContent);
-            //let iconName;
-            //if (feature.properties.ATTR_SCHWI === "Halle") {
-            //    iconName = "swim_indoor2.png";
-            //} else {
-            //    iconName = "swim_frei2.png";
-            //}
-
-            //console.log("Icon für Feature:", iconName);
-            let center = layer.getBounds().getCenter();
-            let marker = L.marker(center, {
+    let geojson = await response.json();
+    L.geoJSON(geojson, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
                 icon: L.icon({
-                    iconUrl: `../icons/photo.png`,
+                    iconUrl: '../icons/photo.png',
                     iconAnchor: [16, 37],
                     popupAnchor: [0, -37],
                 })
-            }).addTo(overlays.culture);
-            marker.bindPopup(popupContent);
+            });
+        },
+      onEachFeature: function (feature, layer) {
+            layer.bindPopup(`<b>${feature.properties.Name}</b><br>${feature.properties.Adresse}`);
         }
     }).addTo(overlays.culture);
 }
@@ -285,9 +251,9 @@ function getColor(value, ramp) {
 
 
 
-
 loadSwim("../swim.geojson");
 loadLift("lifte.geojson");
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
-loadCulture("kuk.geojson");
+loadCulture("../sommer/kuk.geojson");
+
