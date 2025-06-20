@@ -125,7 +125,7 @@ async function loadSwim(url) {
 
             layer.bindPopup(popupContent);
             console.log(feature.properties.ATTR_SCHWI);
-            /* KI_BEGIN */
+            /* KI_BEGIN nicht der Mittelteil*/
             let center = layer.getBounds().getCenter();
             let marker = L.marker(center, {
                 icon: L.icon({

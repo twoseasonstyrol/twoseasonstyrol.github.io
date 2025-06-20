@@ -130,7 +130,13 @@ async function loadLift(url) {
             layer.bindPopup(popupContent);
             
             let center = layer.getBounds().getCenter();
-            let marker = L.marker(center).addTo(overlays.lift);
+            let marker = L.marker(center,{
+                icon: L.icon({
+                    iconUrl: `../icons/cablecar2.png`,
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            }).addTo(overlays.lift);
             marker.bindPopup(popupContent);
 
         }
