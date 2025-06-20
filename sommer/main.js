@@ -86,8 +86,21 @@ async function loadSwim(url) {
             `;
 
             layer.bindPopup(popupContent);
+            let iconName;
+            if (feature.properties.ATTR_SCHWI === "Halle") {
+                iconName = "swim_indoor_2.png";
+            } else {
+                iconName = "swim_frei_2.png";
+            }
+            //console.log("Icon für Feature:", iconName);
             let center = layer.getBounds().getCenter();
-            let marker = L.marker(center).addTo(overlays.swim);
+            let marker = L.marker(center, {
+                icon: L.icon({
+                    iconUrl: `../icons/${iconName}`,
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            }).addTo(overlays.swim);
             marker.bindPopup(popupContent);
         }
     }).addTo(overlays.swim);

@@ -124,6 +124,7 @@ async function loadSwim(url) {
             `;
 
             layer.bindPopup(popupContent);
+            console.log(feature.properties.ATTR_SCHWI);
             /* KI_BEGIN */
             let center = layer.getBounds().getCenter();
             let marker = L.marker(center, {
