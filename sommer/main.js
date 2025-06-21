@@ -10,7 +10,7 @@ let map = L.map("map", {
     scrollWheelZoom: false,
 }).setView([ibk.lat, ibk.lng], ibk.zoom);
 
-/* KI_BEGIN */
+/* KI_BEGINN */
 // Beim Klicken auf die Karte Scroll-Zoom aktivieren
 map.on("click", function () {
     map.scrollWheelZoom.enable();
