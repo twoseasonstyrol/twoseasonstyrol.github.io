@@ -93,7 +93,7 @@ async function loadSki(url) {
         onEachFeature: function (feature, layer) {
             //console.log(feature.properties);
             let popupContent = `
-                <h2 class="title-name">${feature.properties.NAME}</h2>
+                <h3 class="title-name">${feature.properties.NAME}</h3>
                 <p>                  
                     Letzte/Aktuelle Saison: <strong>${feature.properties.SAISON} </strong><br>
                     Öffungzeiten: <br>
@@ -146,7 +146,7 @@ async function loadSwim(url) {
 
             console.log(feature.properties);
             let popupContent = `
-                <h2 class="title-name">${feature.properties.NAME}</h2>
+                <h3 class="title-name">${feature.properties.NAME}</h3>
                 <p>
                     ${feature.properties.SONSTIGE} <br>
                     <div style="margin-top: 4px;"></div>
@@ -202,7 +202,7 @@ async function loadCulture(url) {
         onEachFeature: function (feature, layer) {
             console.log(feature.properties);
             let popupContent = `
-                <h2 class="title-name">${feature.properties.Name}</h2>
+                <h3 class="title-name">${feature.properties.Name}</h3>
                 <p>
                     ${feature.properties.Anmerkung} <br>
                     <div style="margin-top: 4px;"></div>

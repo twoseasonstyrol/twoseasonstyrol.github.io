@@ -91,7 +91,7 @@ async function loadSwim(url) {
         onEachFeature: function (feature, layer) {
             //console.log(feature.properties);
             let popupContent = `
-                <h2 class="title-name">${feature.properties.NAME}</h2>
+                <h3 class="title-name">${feature.properties.NAME}</h3>
                 <p>
                     ${feature.properties.SONSTIGE} <br>
                     <div style="margin-top: 4px;"></div>
@@ -144,7 +144,7 @@ async function loadLift(url) {
         },
         onEachFeature: function (feature, layer) {
             let popupContent = `
-                <h2 class="title-name">${feature.properties.STAETTE_NA}</h2>
+                <h3 class="title-name">${feature.properties.STAETTE_NA}</h3>
                 <p>                  
                     Erholungsgebiet: <strong>${feature.properties.ANLAGE_NAM} </strong><br>
                     Letzte/Aktuelle Saison: <strong>${feature.properties.SAISON} </strong><br>
@@ -194,7 +194,7 @@ async function loadCulture(url) {
         },
       onEachFeature: function (feature, layer) {
         let popupContent = `
-                <h2 class="title-name">${feature.properties.Name}</h2>
+                <h3 class="title-name">${feature.properties.Name}</h3>
                 <p>
                     ${feature.properties.Anmerkung} <br>
                     <div style="margin-top: 4px;"></div>
