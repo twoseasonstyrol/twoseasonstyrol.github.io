@@ -23,6 +23,37 @@ main {
     box-sizing: border-box;
 }
 
+.header-figure {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* oder fixe Höhe z. B. 500px */
+    background-image: url('../images/ibk_sommer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-figure h1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #FF851B;
+    font-size: 60px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 50px;    
+    margin-bottom: 50px;
+    min-width: 1200px;         
+    max-width: 90vw; 
+}
+
+/*
 h1 {
     position: absolute;
     top: 15%;
@@ -39,6 +70,7 @@ h1 {
     min-width: 1200px;         
     max-width: 90vw; 
 }
+    */
 
 h2 {
     font-family: sans-serif;

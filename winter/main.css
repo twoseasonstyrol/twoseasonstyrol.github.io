@@ -22,8 +22,21 @@ main {
     padding: 0;
     box-sizing: border-box;
 }
+/* KI_BEGIN  Weil Bild immer zu spät geladen hat */
+.header-figure {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-image: url('../images/ski_winter.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-h1 {
+.header-figure h1 {
     position: absolute;
     top: 15%;
     left: 50%;
@@ -32,13 +45,14 @@ h1 {
     text-transform: uppercase;
     color: #0074D9;
     font-size: 60px;
+    line-height: 1.5;
     text-align: center;
     margin-top: 50px;    
     margin-bottom: 50px;
-    line-height: 1.5;
     min-width: 1200px;         
     max-width: 90vw; 
 }
+/* KI_END */
 
 h2 {
     font-family: sans-serif;
