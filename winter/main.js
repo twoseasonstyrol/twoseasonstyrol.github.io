@@ -14,8 +14,8 @@ let overlays = {
     wind: L.featureGroup(),
     snow: L.featureGroup(),
     swim: L.featureGroup(),
-    ski: L.featureGroup(),
-    culture: L.featureGroup().addTo(map),
+    ski: L.featureGroup().addTo(map),
+    culture: L.featureGroup(),
 }
 
 // Layer control
