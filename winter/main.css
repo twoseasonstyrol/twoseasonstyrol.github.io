@@ -43,8 +43,9 @@ h1 {
 h2 {
     font-family: sans-serif;
     color: #0074D9;
-    font-size: 30px;
-    margin-top: 20px;    
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;    
     margin-bottom: 20px; 
 }
 
