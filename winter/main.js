@@ -6,7 +6,22 @@ let ibk = {
 };
 
 // Karte initialisieren
-let map = L.map("map").setView([ibk.lat, ibk.lng], ibk.zoom);
+let map = L.map("map", {
+    scrollWheelZoom: false,
+}).setView([ibk.lat, ibk.lng], ibk.zoom);
+
+/* KI_BEGINN */
+// Beim Klicken auf die Karte Scroll-Zoom aktivieren
+map.on("click", function () {
+    map.scrollWheelZoom.enable();
+});
+
+// Beim Verlassen der Karte Scroll-Zoom wieder deaktivieren
+map.on("mouseout", function () {
+    map.scrollWheelZoom.disable();
+});
+/* KI_ENDE */
+
 
 // thematische Layer
 let overlays = {
