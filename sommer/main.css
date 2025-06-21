@@ -123,9 +123,10 @@ article {
 }
 
 footer {
-    font-family: "Roboto", sans-serif;
+    font-family: sans-serif;
     font-size: 0.9em;
     margin-top: 0.5em;
+    text-align: center;
 }
 
 footer nav {
