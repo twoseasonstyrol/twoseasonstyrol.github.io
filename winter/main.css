@@ -18,19 +18,26 @@ a {
 }
 
 main {
-    max-width: 1200px;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: sans-serif;
     text-transform: uppercase;
     color: #0074D9;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     margin-top: 50px;    
     margin-bottom: 50px;
-    line-height: 1.5; 
+    line-height: 1.5;
+    min-width: 1200px;         
+    max-width: 90vw; 
 }
 
 h2 {
@@ -112,11 +119,6 @@ header {
 
 .top-nav a.active:hover {
     color: #111111;
-}
-
-
-article {
-    margin-top: 0.5em;
 }
 
 #map {
