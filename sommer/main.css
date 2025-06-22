@@ -53,6 +53,14 @@ main {
     max-width: 90vw; 
 }
 
+.image-source {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    color: #ccc;
+}
+
 h2 {
     font-family: sans-serif;
     color: #FF851B;
