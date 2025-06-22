@@ -30,6 +30,7 @@ let overlays = {
     lift: L.featureGroup(),
     swim: L.featureGroup(),
     culture: L.featureGroup().addTo(map),
+    ice: L.featureGroup(),
 }
 
 // Layer control
@@ -40,6 +41,7 @@ L.control.layers({
     "Kunst & Kultur": overlays.culture,
     "Schwimmbäder": overlays.swim,
     "Lifte": overlays.lift,
+    "Eislaufbahnen": overlays.ice,
     "Temperatur (°C)": overlays.temperature,
     "Wind (km/h)": overlays.wind,
 }).addTo(map);
@@ -216,6 +218,46 @@ async function loadCulture(url) {
     }).addTo(overlays.culture);
 }
 
+async function loadEis(url) {
+    let response = await fetch(url);
+    let geojson = await response.json();
+    L.geoJSON(geojson, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: L.icon({
+                    iconUrl: '../icons/iceskating.png',
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            });
+        },
+        onEachFeature: function (feature, layer) {
+            console.log(feature.properties);
+            let popupContent = `
+                <h3 class="title-name">${feature.properties.NAME}</h3>
+                <p>                  
+                    Saison: <strong>${feature.properties.SAISON} </strong><br>
+                    Öffungzeiten: <br>
+                        <strong>${feature.properties.OPEN.replaceAll(';', ';<br>')}</strong><br>
+                </p>
+                <h4 class="title-contact">Kontakt</h4>
+                <div class="text-popup">
+                <p class="contact-info">
+                    Adresse: ${feature.properties.ADDRESS}<br>
+                    Telefon: <a href="tel:${feature.properties.KONTAKT_TE}">${feature.properties.KONTAKT_TE}</a><br>
+                    E-Mail: <a href="mailto:${feature.properties.KONTAKT_EM}">${feature.properties.KONTAKT_EM}</a><br>
+                    <a href="${feature.properties.LINK}"><strong>Homepage </strong></a>
+                </p>
+                </div>
+            `;
+            layer.bindPopup(popupContent);
+        },
+        filter: function (feature, layer) {
+            return feature.properties.SAISON === "ganzjährig";
+        },
+    }).addTo(overlays.ice);
+}
+
 // Wetterstationen
 async function loadStations(url) {
     //console.log(url)
@@ -286,6 +328,7 @@ function getColor(value, ramp) {
 
 loadSwim("../swim.geojson");
 loadLift("lifte.geojson");
+loadEis("../eislaufbahnen.geojson");
 // Wetterstationen laden
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
 loadCulture("../kuk.geojson");
