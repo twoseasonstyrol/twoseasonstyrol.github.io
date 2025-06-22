@@ -147,6 +147,10 @@ header {
     border: 1px solid gray;
 }
 
+.map-footer{
+    text-align: left;
+}
+
 footer {
     font-family: sans-serif;
     font-size: 0.9em;
