@@ -31,6 +31,7 @@ let overlays = {
     swim: L.featureGroup(),
     ski: L.featureGroup().addTo(map),
     culture: L.featureGroup(),
+    ice: L.featureGroup(),
 }
 
 // Layer control
@@ -39,6 +40,7 @@ L.control.layers({
     "Esri WorldImagery": L.tileLayer.provider("Esri.WorldImagery")
 }, {
     "Skigebiete": overlays.ski,
+    "Eislaufbahnen": overlays.ice,
     "Kunst & Kultur": overlays.culture,
     "Schwimmbäder": overlays.swim,
     "Schneehöhe (cm)": overlays.snow,
@@ -111,8 +113,6 @@ async function loadSki(url) {
                     <a href="${feature.properties.WEBLINK}"><strong>Homepage </strong></a>
                 </p>
                 </div>
-                
-
             `;
             layer.bindPopup(popupContent);
             /* KI_BEGIN */
@@ -128,6 +128,43 @@ async function loadSki(url) {
             /* KI_ENDE */
         }
     }).addTo(overlays.ski);
+}
+
+async function loadEis(url) {
+    let response = await fetch(url);
+    let geojson = await response.json();
+    L.geoJSON(geojson, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {
+                icon: L.icon({
+                    iconUrl: '../icons/iceskating.png',
+                    iconAnchor: [16, 37],
+                    popupAnchor: [0, -37],
+                })
+            });
+        },
+        onEachFeature: function (feature, layer) {
+            console.log(feature.properties);
+            let popupContent = `
+                <h3 class="title-name">${feature.properties.NAME}</h3>
+                <p>                  
+                    Saison: <strong>${feature.properties.SAISON} </strong><br>
+                    Öffungzeiten: <br>
+                        <strong>${feature.properties.OPEN.replaceAll(';', ';<br>')}</strong><br>
+                </p>
+                <h4 class="title-contact">Kontakt</h4>
+                <div class="text-popup">
+                <p class="contact-info">
+                    Adresse: ${feature.properties.ADDRESS}<br>
+                    Telefon: <a href="tel:${feature.properties.KONTAKT_TE}">${feature.properties.KONTAKT_TE}</a><br>
+                    E-Mail: <a href="mailto:${feature.properties.KONTAKT_EM}">${feature.properties.KONTAKT_EM}</a><br>
+                    <a href="${feature.properties.LINK}"><strong>Homepage </strong></a>
+                </p>
+                </div>
+            `;
+            layer.bindPopup(popupContent);
+        }
+    }).addTo(overlays.ice);
 }
 
 async function loadSwim(url) {
@@ -317,6 +354,7 @@ function getColor(value, ramp) {
 
 
 loadSki("skigebiete.geojson");
+loadEis("../eislaufbahnen.geojson");
 loadSwim("../swim.geojson");
 loadStations("https://static.avalanche.report/weather_stations/stations.geojson");
 loadCulture("../kuk.geojson");
