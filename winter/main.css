@@ -54,6 +54,14 @@ main {
 }
 /* KI_END */
 
+.image-source {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    color: #ccc;
+}
+
 h2 {
     font-family: sans-serif;
     color: #0074D9;
