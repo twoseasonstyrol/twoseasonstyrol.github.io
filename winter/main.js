@@ -57,10 +57,10 @@ L.control.scale({
 L.control.rainviewer({
     position: 'bottomleft',
     nextButtonText: '>',
-    playStopButtonText: 'Play/Stop',
+    playStopButtonText: '▶/⏸',
     prevButtonText: '<',
-    positionSliderLabelText: "Hour:",
-    opacitySliderLabelText: "Opacity:",
+    positionSliderLabelText: "Zeit:",
+    opacitySliderLabelText: "Deckkraft:",
     animationInterval: 500,
     opacity: 0.5
 }).addTo(map);
@@ -73,13 +73,27 @@ L.control.resetView({
     zoom: map.getZoom(),
 }).addTo(map);
 
+/* KI_BEGINN */
+// Verhindert das Standardverhalten der Buttons in den Controls
+setTimeout(() => {
+    document.querySelectorAll(
+        '.leaflet-control-rainviewer button, .leaflet-control-rainviewer a, ' +
+        '.leaflet-control-resetview button, .leaflet-control-resetview a'
+    ).forEach(el => {
+        el.addEventListener('click', e => e.preventDefault());
+    });
+}, 100);
+/* KI_ENDE */
+
 // Standort Control hinzufügen
 L.control.locate({
+    drawCircle: false,
     strings: {
-        title: "Eigenen Standort anzeigen",
-        drawCircle: false,
-    },
+        title: "Eigenen Standort anzeigen"
+    }
 }).addTo(map);
+
+
 
 async function loadSki(url) {
     //console.log(url);
