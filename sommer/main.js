@@ -206,8 +206,8 @@ async function loadCulture(url) {
                 })
             });
         },
-      onEachFeature: function (feature, layer) {
-        let popupContent = `
+        onEachFeature: function (feature, layer) {
+            let popupContent = `
                 <h3 class="title-name">${feature.properties.Name}</h3>
                 <p>
                     ${feature.properties.Anmerkung} <br>

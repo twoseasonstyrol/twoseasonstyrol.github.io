@@ -1,56 +1,1828 @@
 {
-"type": "FeatureCollection",
-"name": "lifte",
-"bbox": [ 10.14385, 46.84890, 12.43052, 47.65341 ],                                                                                
-"features": [
-{ "type": "Feature", "properties": { "STAETTE_NA": "Drei Seen Bahn", "ANLAGE_NAM": "Kühtai", "ATTR_TYP": "4er Sesselbahn kuppelbar", "OPEN": "Mo-So 09:00-16:30", "SAISON": "22.06.2024 - 22.09.2024", "KONTAKT_TE": "+43 512 / 53 56 - 61 83", "WEBLINK": "https://www.kuehtai.info/", "KONTAKT_EM": "kuehtai@innsbruck.info" }, "bbox": [ 11.01537, 47.20494, 11.03922, 47.21169 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.01537, 47.21169 ], [ 11.03238, 47.20693 ], [ 11.03922, 47.20494 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Hoadlbahn I", "ANLAGE_NAM": "Axams - Axamer Lizum", "ATTR_TYP": "10er Einseilumlaufbahn", "OPEN": "Mo-So  08:30-16:30", "SAISON": "26.06.2025 - 21.09.2025", "KONTAKT_TE": "05234 68240", "WEBLINK": "https://www.axamer-lizum.at/", "KONTAKT_EM": "office@axamer-lizum.at" }, "bbox": [ 11.28985, 47.18958, 11.3029, 47.19397 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.28985, 47.18958 ], [ 11.3029, 47.19397 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Birgitzköpfl", "ANLAGE_NAM": "Axams - Axamer Lizum", "ATTR_TYP": "2er Sessellift fix geklemmt", "OPEN": "Mo-So  08:30-16:30", "SAISON": "26.06.2025 - 21.09.2025", "KONTAKT_TE": "05234 68240", "WEBLINK": "https://www.axamer-lizum.at/", "KONTAKT_EM": "office@axamer-lizum.at" }, "bbox": [ 11.30355, 47.19406, 11.31635, 47.19475 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.30355, 47.19406 ], [ 11.31635, 47.19475 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Hoadlbahn II", "ANLAGE_NAM": "Axams - Axamer Lizum", "ATTR_TYP": "10er Einseilumlaufbahn", "OPEN": "Mi-So  08:30-16:30", "SAISON": "26.06.2025 - 21.09.2025", "KONTAKT_TE": "05234 68240", "WEBLINK": "https://www.axamer-lizum.at/", "KONTAKT_EM": "office@axamer-lizum.at" }, "bbox": [ 11.28139, 47.18343, 11.28985, 47.18959 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.28985, 47.18959 ], [ 11.28139, 47.18343 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Rosshütte", "ANLAGE_NAM": "Seefeld - Roßhütte", "ATTR_TYP": "Standseilbahn", "OPEN": "Mo-So 09:00-17:00", "SAISON": "25.05.2025 - 27.10.2025", "KONTAKT_TE": "+43 5 0880", "WEBLINK": "https://www.seefeld.com/de/rosshuette.html", "KONTAKT_EM": "region@seefeld.com" }, "bbox": [ 11.2, 47.33196, 11.2277, 47.34155 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.2, 47.33196 ], [ 11.21081, 47.3383 ], [ 11.21102, 47.33841 ], [ 11.21125, 47.33852 ], [ 11.2115, 47.33862 ], [ 11.21216, 47.33882 ], [ 11.21478, 47.33959 ], [ 11.21551, 47.33981 ], [ 11.21603, 47.33996 ], [ 11.21627, 47.34002 ], [ 11.21646, 47.34007 ], [ 11.21674, 47.34013 ], [ 11.21698, 47.34017 ], [ 11.21804, 47.3403 ], [ 11.22213, 47.34083 ], [ 11.2277, 47.34155 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Kreuzjochbahn II", "ANLAGE_NAM": "Skizentrum Schlick 2000", "ATTR_TYP": "6er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-16:30", "SAISON": "29.05.2025 - 12.10.2025", "KONTAKT_TE": "+43 5225 62270", "WEBLINK": "https://www.stubai.at/skigebiete/schlick2000/", "KONTAKT_EM": "info@schlick2000.at" }, "bbox": [ 11.30704, 47.14536, 11.33265, 47.15642 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.33265, 47.15642 ], [ 11.30704, 47.14536 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Diasbahn", "ANLAGE_NAM": "Kappl - Diasalpe", "ATTR_TYP": "4er Einseilumlaufbahn", "OPEN": "in Bau", "SAISON": "in Bau", "KONTAKT_TE": "+43 50990 300", "WEBLINK": "https://www.kappl.com/de/", "KONTAKT_EM": "info@kappl.com" }, "bbox": [ 10.35938, 47.06035, 10.3742, 47.06708 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.35938, 47.06708 ], [ 10.3742, 47.06035 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Vallugabahn 1", "ANLAGE_NAM": "St. Anton - Ski Arlberg", "ATTR_TYP": "Zweiseilpendelbahn", "OPEN": "Mo-So 08:15-16:30", "SAISON": "14.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5446 2352-0", "WEBLINK": "https://www.skiarlberg.at/de", "KONTAKT_EM": "info@abbag.com" }, "bbox": [ 10.21313, 47.13078, 10.23038, 47.15471 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.21313, 47.15471 ], [ 10.23038, 47.13078 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Vallugabahn 2", "ANLAGE_NAM": "St. Anton - Ski Arlberg", "ATTR_TYP": "Zweiseilpendelbahn", "OPEN": "Mo-So 08:15-16:30", "SAISON": "14.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5446 2352-0", "WEBLINK": "https://www.skiarlberg.at/de", "KONTAKT_EM": "info@abbag.com" }, "bbox": [ 10.21298, 47.15463, 10.21344, 47.15761 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.21298, 47.15761 ], [ 10.21344, 47.15463 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Kellerjochbahn III (Grafenast-Arbeser)", "ANLAGE_NAM": "Schwaz - Kellerjoch", "ATTR_TYP": "2er Sessellift fix geklemmt", "OPEN": "Di-So 08:45-16:30", "SAISON": "05.07.2025 - 28.09.2025", "KONTAKT_TE": "+43 5242 623 23-0", "WEBLINK": "https://www.kellerjochbahn.at/", "KONTAKT_EM": "info@kellerjochbahn.at" }, "bbox": [ 11.71971, 47.32086, 11.74262, 47.32141 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.74262, 47.32141 ], [ 11.71971, 47.32086 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Hochkössen", "ANLAGE_NAM": "Kössen - Unterberghorn", "ATTR_TYP": "6er Einseilumlaufbahn", "OPEN": "Mo-So 09:30-16:30", "SAISON": "26.10.2025 - 28.10.2025", "KONTAKT_TE": "+43 5375 6226", "WEBLINK": "https://skisport.com/hochkoessen/de", "KONTAKT_EM": "koessen@skisport.com" }, "bbox": [ 12.42118, 47.63222, 12.43052, 47.65341 ], "geometry": { "type": "LineString", "coordinates": [ [ 12.42118, 47.65341 ], [ 12.43052, 47.63222 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Kreuzjochbahn I", "ANLAGE_NAM": "Skizentrum Schlick 2000", "ATTR_TYP": "6er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-16:30", "SAISON": "29.05.2025 - 12.10.2025", "KONTAKT_TE": "+43 5225 62270", "WEBLINK": "https://www.stubai.at/skigebiete/schlick2000/", "KONTAKT_EM": "info@schlick2000.at" }, "bbox": [ 11.33279, 47.15531, 11.3435, 47.15643 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.33279, 47.15643 ], [ 11.3435, 47.15531 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Silvrettabahn I", "ANLAGE_NAM": "Ischgl - Silvretta", "ATTR_TYP": "Doppelseilumlaufbahn", "OPEN": "Mo-So 08:30-17:00", "SAISON": "28.06.2025 - 07.09.2025", "KONTAKT_TE": "+43 50990 100", "WEBLINK": "https://www.ischgl.com/de/", "KONTAKT_EM": "info@paznaun-ischgl.com" }, "bbox": [ 10.28822, 46.99613, 10.3022, 47.01 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.28822, 47.01 ], [ 10.3022, 46.99613 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Silvrettabahn II", "ANLAGE_NAM": "Ischgl - Silvretta", "ATTR_TYP": "Doppelseilumlaufbahn", "OPEN": "Mo-So 08:30-17:00", "SAISON": "28.06.2025 - 07.09.2025", "KONTAKT_TE": "+43 50990 100", "WEBLINK": "https://www.ischgl.com/de/", "KONTAKT_EM": "info@paznaun-ischgl.com" }, "bbox": [ 10.30224, 46.98248, 10.31696, 46.9961 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.30224, 46.9961 ], [ 10.30225, 46.99609 ], [ 10.31696, 46.98248 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Kapallbahn", "ANLAGE_NAM": "St. Anton - Ski Arlberg", "ATTR_TYP": "6er Sesselbahn kuppelbar", "OPEN": "Mo-So 08:15-16:30", "SAISON": "14.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5446 2352-0", "WEBLINK": "https://www.skiarlberg.at/de", "KONTAKT_EM": "info@abbag.com" }, "bbox": [ 10.24842, 47.13764, 10.24862, 47.14826 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.24862, 47.14826 ], [ 10.24842, 47.13764 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Hochserles", "ANLAGE_NAM": "Mieders - Serleslifte", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-16:30", "SAISON": "16.05.2025 - 02.11.2025", "KONTAKT_TE": "+43 501 881 0", "WEBLINK": "https://www.stubai.at/skigebiete/serlesbahnen/", "KONTAKT_EM": "kassa@serlesbahnen.com" }, "bbox": [ 11.38011, 47.14994, 11.39499, 47.16354 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.38011, 47.16354 ], [ 11.39499, 47.14994 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Alpkogelbahn", "ANLAGE_NAM": "Galtür - Birkhahn", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 09:00–16:45", "SAISON": "19.06.2025 - 12.10.2025", "KONTAKT_TE": "+43 5443 8344", "WEBLINK": "https://www.galtuer.com/de/bergbahnen-galtuer", "KONTAKT_EM": "info@bergbahnen-galtuer.at" }, "bbox": [ 10.14385, 46.96627, 10.16218, 46.96704 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.14385, 46.96704 ], [ 10.16218, 46.96627 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Elfer", "ANLAGE_NAM": "Neustift - Elfer", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-16:30", "SAISON": "16.05.2025 - 02.11.2025", "KONTAKT_TE": "+43 501 881 0", "WEBLINK": "https://www.stubai.at/skigebiete/elferbahnen/", "KONTAKT_EM": "kassa@elferbahnen.at" }, "bbox": [ 11.31238, 47.09863, 11.32341, 47.11092 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.31238, 47.11092 ], [ 11.32341, 47.09863 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Galzigbahn", "ANLAGE_NAM": "St. Anton - Ski Arlberg", "ATTR_TYP": "Doppelseilumlaufbahn", "OPEN": "Mo-So 08:15-16:30", "SAISON": "14.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5446 2352-0", "WEBLINK": "https://www.skiarlberg.at/de", "KONTAKT_EM": "info@abbag.com" }, "bbox": [ 10.23072, 47.12814, 10.26299, 47.13084 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.23072, 47.13084 ], [ 10.26299, 47.12814 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Nordkettenbahn I", "ANLAGE_NAM": "Innsbruck - Nordkette", "ATTR_TYP": "Zweiseilpendelbahn", "OPEN": "Mo-So 08:30-18:30", "SAISON": "27.04.2024 - 03.11.2024", "KONTAKT_TE": "+43 (0) 512 293344", "WEBLINK": "https://nordkette.com/", "KONTAKT_EM": "info@nordkette.com" }, "bbox": [ 11.37974, 47.28615, 11.39901, 47.30637 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.37974, 47.30637 ], [ 11.39901, 47.28615 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Nordkettenbahn II", "ANLAGE_NAM": "Innsbruck - Nordkette", "ATTR_TYP": "Zweiseilpendelbahn", "OPEN": "Mo-So 09:00-17:45", "SAISON": "27.04.2024 - 03.11.2024", "KONTAKT_TE": "+43 (0) 512 293344", "WEBLINK": "https://nordkette.com/", "KONTAKT_EM": "info@nordkette.com" }, "bbox": [ 11.37978, 47.30654, 11.38354, 47.31202 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.38354, 47.31202 ], [ 11.37978, 47.30654 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Hungerburgbahn", "ANLAGE_NAM": "Innsbruck - Nordkette", "ATTR_TYP": "Standseilbahn", "OPEN": "Mo-Fr 07:15-19:15; Sa-So 08:00-19:15", "SAISON": "27.04.2024 - 03.11.2024", "KONTAKT_TE": "+43 (0) 512 293344", "WEBLINK": "https://nordkette.com/", "KONTAKT_EM": "info@nordkette.com" }, "bbox": [ 11.39532, 47.27118, 11.40109, 47.28621 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.39532, 47.27118 ], [ 11.39537, 47.27177 ], [ 11.3954, 47.27241 ], [ 11.39542, 47.27261 ], [ 11.39548, 47.27285 ], [ 11.39565, 47.27318 ], [ 11.39584, 47.27346 ], [ 11.39657, 47.27439 ], [ 11.39685, 47.27477 ], [ 11.397, 47.27495 ], [ 11.39707, 47.27507 ], [ 11.39715, 47.27523 ], [ 11.39724, 47.27547 ], [ 11.39726, 47.27562 ], [ 11.39726, 47.2758 ], [ 11.39725, 47.27613 ], [ 11.39726, 47.27635 ], [ 11.39727, 47.27652 ], [ 11.3973, 47.27668 ], [ 11.39737, 47.27688 ], [ 11.39746, 47.27707 ], [ 11.39754, 47.27725 ], [ 11.39772, 47.27748 ], [ 11.39791, 47.27771 ], [ 11.39836, 47.27831 ], [ 11.39851, 47.27854 ], [ 11.39864, 47.27878 ], [ 11.39899, 47.27942 ], [ 11.40024, 47.28169 ], [ 11.40069, 47.28247 ], [ 11.40084, 47.28275 ], [ 11.40092, 47.28295 ], [ 11.40101, 47.28321 ], [ 11.40106, 47.28346 ], [ 11.40109, 47.2837 ], [ 11.40109, 47.28392 ], [ 11.40108, 47.28418 ], [ 11.40104, 47.28438 ], [ 11.40099, 47.28456 ], [ 11.40076, 47.28544 ], [ 11.40072, 47.28557 ], [ 11.40066, 47.28568 ], [ 11.4006, 47.28578 ], [ 11.40046, 47.28594 ], [ 11.4002, 47.28621 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Muttereralmbahn", "ANLAGE_NAM": "Mutters - Mutterer Alm", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-17:00", "SAISON": "25.05.2024 - 31.10.2024", "KONTAKT_TE": "+43 512 54 83 30", "WEBLINK": "https://www.muttereralm.at/de/mutters-innsbruck-tirol/1-0.html", "KONTAKT_EM": "office@muttereralm.at" }, "bbox": [ 11.33371, 47.21159, 11.36627, 47.22245 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.36627, 47.22245 ], [ 11.33371, 47.21159 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "8EUB Bergeralm", "ANLAGE_NAM": "Steinach - Bergeralm", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-17:00", "SAISON": "19.06.2025 - 14.09.2025", "KONTAKT_TE": "+43 5272 6333", "WEBLINK": "www.bergeralm.net", "KONTAKT_EM": "mail@bergeralm.net" }, "bbox": [ 11.45461, 47.07615, 11.45974, 47.08688 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.45974, 47.08688 ], [ 11.45461, 47.07615 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Rendlbahn", "ANLAGE_NAM": "St. Anton - Ski Arlberg", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 08:15-16:30", "SAISON": "14.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5446 2352-0", "WEBLINK": "https://www.skiarlberg.at/de", "KONTAKT_EM": "info@abbag.com" }, "bbox": [ 10.26316, 47.10483, 10.26785, 47.12677 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.26316, 47.12677 ], [ 10.26344, 47.12534 ], [ 10.26785, 47.10483 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Hohe Mut Bahn", "ANLAGE_NAM": "Obergurgl - Hochgurgl", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-16:00", "SAISON": "21.06.2024 - 15.09.2024", "KONTAKT_TE": "+43 (0) 57200 200", "WEBLINK": "https://www.gurgl.com/de?setSeason=winter", "KONTAKT_EM": "info@oetztal.com" }, "bbox": [ 11.02286, 46.8489, 11.02886, 46.86919 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.02886, 46.8489 ], [ 11.02286, 46.86031 ], [ 11.02696, 46.86919 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Fimbabahn I", "ANLAGE_NAM": "Ischgl - Silvretta", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 08:30-17:00", "SAISON": "08.09.2025 - 12.10.2025", "KONTAKT_TE": "+43 50990 100", "WEBLINK": "https://www.ischgl.com/de/", "KONTAKT_EM": "info@paznaun-ischgl.com" }, "bbox": [ 10.2937, 46.99752, 10.30099, 47.01158 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.30099, 46.99752 ], [ 10.2937, 47.01158 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Fimbabahn II", "ANLAGE_NAM": "Ischgl - Silvretta", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 08:30-17:00", "SAISON": "08.09.2025 - 12.10.2025", "KONTAKT_TE": "+43 50990 100", "WEBLINK": "https://www.ischgl.com/de/", "KONTAKT_EM": "info@paznaun-ischgl.com" }, "bbox": [ 10.30103, 46.98259, 10.31712, 46.99748 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.31712, 46.98259 ], [ 10.30103, 46.99748 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Peter Anich I", "ANLAGE_NAM": "Oberperfuss - Rangger Köpfl", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Sa-So 09:00-16:00", "SAISON": "29.05.2025 - 03.11.2025", "KONTAKT_TE": "+43(0)5232 81505", "WEBLINK": "https://www.rangger-koepfl.at/winter/", "KONTAKT_EM": "office@rangger-koepfl.at" }, "bbox": [ 11.22148, 47.23829, 11.2374, 47.24567 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.2374, 47.24567 ], [ 11.22148, 47.23829 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "8 EUB Eisjoch (Schaufeljoch)", "ANLAGE_NAM": "Stubaier Gletscher", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "-", "SAISON": "28.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5226 8141", "WEBLINK": "https://www.stubaier-gletscher.com/", "KONTAKT_EM": "info@stubaier-gletscher.com" }, "bbox": [ 11.11083, 46.97715, 11.11453, 46.98709 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.11453, 46.98709 ], [ 11.11083, 46.97715 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Flimjoch", "ANLAGE_NAM": "Ischgl - Silvretta", "ATTR_TYP": "8er Sesselbahn kuppelbar", "OPEN": "Mo-So 09:00-16:00", "SAISON": "28.06.2025-12.10.2025", "KONTAKT_TE": "+43 50990 100", "WEBLINK": "https://www.ischgl.com/de/", "KONTAKT_EM": "info@paznaun-ischgl.com" }, "bbox": [ 10.31642, 46.97996, 10.33975, 46.98138 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.31642, 46.98138 ], [ 10.33975, 46.97996 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Eisgratbahn I 3S", "ANLAGE_NAM": "Stubaier Gletscher", "ATTR_TYP": "Dreiseilumlaufbahn", "OPEN": "-", "SAISON": "28.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5226 8141", "WEBLINK": "https://www.stubaier-gletscher.com/", "KONTAKT_EM": "info@stubaier-gletscher.com" }, "bbox": [ 11.14112, 46.99709, 11.16206, 47.01318 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.16206, 47.01318 ], [ 11.14112, 46.99709 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Eisgratbahn II 3S", "ANLAGE_NAM": "Stubaier Gletscher", "ATTR_TYP": "Dreiseilumlaufbahn", "OPEN": "-", "SAISON": "28.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5226 8141", "WEBLINK": "https://www.stubaier-gletscher.com/", "KONTAKT_EM": "info@stubaier-gletscher.com" }, "bbox": [ 11.11507, 46.98716, 11.14076, 46.99708 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.14076, 46.99708 ], [ 11.11507, 46.98716 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Kirchenkar I", "ANLAGE_NAM": "Obergurgl - Hochgurgl", "ATTR_TYP": "10er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-16:00", "SAISON": "21.06.2024 - 15.09.2024", "KONTAKT_TE": "+43 (0) 57200 200", "WEBLINK": "https://www.gurgl.com/de?setSeason=winter", "KONTAKT_EM": "info@oetztal.com" }, "bbox": [ 11.05366, 46.90392, 11.07137, 46.9092 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.07137, 46.90392 ], [ 11.05366, 46.9092 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Patscherkofelbahn", "ANLAGE_NAM": "Innsbruck - Patscherkofel", "ATTR_TYP": "10er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-17:00", "SAISON": "17.05.2025 - 02.11.2025", "KONTAKT_TE": "+43 512 37 72 34", "WEBLINK": "https://www.patscherkofelbahn.at/", "KONTAKT_EM": "info@patscherkofelbahn.at" }, "bbox": [ 11.42672, 47.21007, 11.45171, 47.22199 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.42672, 47.22199 ], [ 11.44193, 47.2113 ], [ 11.45171, 47.21007 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Peter Anich II", "ANLAGE_NAM": "Oberperfuss - Rangger Köpfl", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Sa-So 09:00-16:00", "SAISON": "29.05.2025 - 03.11.2025", "KONTAKT_TE": "+43(0)5232 81505", "WEBLINK": "https://www.rangger-koepfl.at/winter/", "KONTAKT_EM": "office@rangger-koepfl.at" }, "bbox": [ 11.19983, 47.23824, 11.22114, 47.24022 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.22114, 47.23824 ], [ 11.19983, 47.24022 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Glungezerbahn I", "ANLAGE_NAM": "Tulfes - Glungezer", "ATTR_TYP": "10er Einseilumlaufbahn", "OPEN": "Mo-So 08:30-17:00", "SAISON": "30.05.2024 - 03.11.2024", "KONTAKT_TE": "+43 5223 78 321", "WEBLINK": "https://www.glungezerbahn.at/", "KONTAKT_EM": "info@glungezerbahn.at" }, "bbox": [ 11.53527, 47.24203, 11.54362, 47.25637 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.53527, 47.25637 ], [ 11.54362, 47.24203 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Kirchenkar II", "ANLAGE_NAM": "Obergurgl - Hochgurgl", "ATTR_TYP": "10er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-16:00", "SAISON": "21.06.2024 - 15.09.2024", "KONTAKT_TE": "+43 (0) 57200 200", "WEBLINK": "https://www.gurgl.com/de?setSeason=winter", "KONTAKT_EM": "info@oetztal.com" }, "bbox": [ 11.07123, 46.90404, 11.07772, 46.90445 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.07123, 46.90404 ], [ 11.07772, 46.90445 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Kombibahn Hoher Turm", "ANLAGE_NAM": "Steinach - Bergeralm", "ATTR_TYP": "Kombinationsbahn", "OPEN": "Mo-So 09:00-17:00", "SAISON": "19.06.2025 - 14.09.2025", "KONTAKT_TE": "+43 5272 6333", "WEBLINK": "www.bergeralm.net", "KONTAKT_EM": "mail@bergeralm.net" }, "bbox": [ 11.44331, 47.06115, 11.45359, 47.07644 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.45359, 47.07644 ], [ 11.44331, 47.06115 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Peter Anich III", "ANLAGE_NAM": "Oberperfuss - Rangger Köpfl", "ATTR_TYP": "Kombinationsbahn", "OPEN": "Sa-So 09:00-16:00", "SAISON": "29.05.2025 - 03.11.2025", "KONTAKT_TE": "+43(0)5232 81505", "WEBLINK": "https://www.rangger-koepfl.at/winter/", "KONTAKT_EM": "office@rangger-koepfl.at" }, "bbox": [ 11.18172, 47.24043, 11.19882, 47.24274 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.19882, 47.24043 ], [ 11.18172, 47.24274 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Götznerbahn", "ANLAGE_NAM": "Mutters - Mutterer Alm", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-17:00", "SAISON": "25.05.2024 - 31.10.2024", "KONTAKT_TE": "+43 512 54 83 30", "WEBLINK": "https://www.muttereralm.at/de/mutters-innsbruck-tirol/1-0.html", "KONTAKT_EM": "office@muttereralm.at" }, "bbox": [ 11.31464, 47.20755, 11.32847, 47.23181 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.32847, 47.20755 ], [ 11.31464, 47.23181 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Tulfein Express", "ANLAGE_NAM": "Tulfes - Glungezer", "ATTR_TYP": "Kombinationsbahn", "OPEN": "Mo-So 08:30-17:00", "SAISON": "30.05.2024 - 03.11.2024", "KONTAKT_TE": "+43 5223 78 321", "WEBLINK": "https://www.glungezerbahn.at/", "KONTAKT_EM": "info@glungezerbahn.at" }, "bbox": [ 11.52931, 47.22572, 11.54344, 47.2416 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.52931, 47.22572 ], [ 11.54344, 47.2416 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Härmelekopfbahn", "ANLAGE_NAM": "Seefeld - Roßhütte", "ATTR_TYP": "Zweiseilpendelbahn", "OPEN": "Mo-So 09:00-17:00", "SAISON": "25.05.2025 - 27.10.2025", "KONTAKT_TE": "+43 5 0880", "WEBLINK": "https://www.seefeld.com/de/rosshuette.html", "KONTAKT_EM": "region@seefeld.com" }, "bbox": [ 11.22743, 47.32902, 11.22774, 47.34131 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.22774, 47.34131 ], [ 11.22743, 47.32902 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Seefelder Jochbahn", "ANLAGE_NAM": "Seefeld - Roßhütte", "ATTR_TYP": "Zweiseilpendelbahn", "OPEN": "Mo-So 09:00-17:00", "SAISON": "25.05.2025 - 27.10.2025", "KONTAKT_TE": "+43 5 0880", "WEBLINK": "https://www.seefeld.com/de/rosshuette.html", "KONTAKT_EM": "region@seefeld.com" }, "bbox": [ 11.22809, 47.34078, 11.23947, 47.34159 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.22809, 47.34159 ], [ 11.23947, 47.34078 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Tulfein Express", "ANLAGE_NAM": "Tulfes - Glungezer", "ATTR_TYP": "Kombinationsbahn", "OPEN": "Mo-So 08:30-17:00", "SAISON": "30.05.2024 - 03.11.2024", "KONTAKT_TE": "+43 5223 78 321", "WEBLINK": "https://www.glungezerbahn.at/", "KONTAKT_EM": "info@glungezerbahn.at" }, "bbox": [ 11.52931, 47.22572, 11.54344, 47.2416 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.52931, 47.22572 ], [ 11.54344, 47.2416 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Galtbergbahn", "ANLAGE_NAM": "Skizentrum Schlick 2000", "ATTR_TYP": "10er Einseilumlaufbahn", "OPEN": "Mo-So 09:00-16:30", "SAISON": "29.05.2025 - 12.10.2025", "KONTAKT_TE": "+43 5225 62270", "WEBLINK": "https://www.stubai.at/skigebiete/schlick2000/", "KONTAKT_EM": "info@schlick2000.at" }, "bbox": [ 11.31966, 47.15051, 11.33594, 47.15732 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.33594, 47.15732 ], [ 11.31966, 47.15051 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Kreithbahn", "ANLAGE_NAM": "Leutasch", "ATTR_TYP": "3er Sessellift fix geklemmt", "OPEN": "Mo-So 09:30-17:00", "SAISON": "01.05.2025 - 01.11.2025", "KONTAKT_TE": "+43 5214 6219", "WEBLINK": "https://www.katzenkopf-leutasch.at/de/", "KONTAKT_EM": "info@katzenkopf-leutasch.at" }, "bbox": [ 11.16202, 47.35844, 11.16561, 47.36379 ], "geometry": { "type": "LineString", "coordinates": [ [ 11.16561, 47.36379 ], [ 11.16202, 47.35844 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Gampenbahn (Schindlerbahn I)", "ANLAGE_NAM": "St. Anton - Ski Arlberg", "ATTR_TYP": "4er Sesselbahn kuppelbar", "OPEN": "Mo-So 08:15-16:30", "SAISON": "14.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5446 2352-0", "WEBLINK": "https://www.skiarlberg.at/de", "KONTAKT_EM": "info@abbag.com" }, "bbox": [ 10.2494, 47.12876, 10.26314, 47.13722 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.2494, 47.13722 ], [ 10.26314, 47.12876 ] ] } },
-{ "type": "Feature", "properties": { "STAETTE_NA": "Nassereinbahn", "ANLAGE_NAM": "St. Anton - Ski Arlberg", "ATTR_TYP": "8er Einseilumlaufbahn", "OPEN": "Mo-So 08:15-16:30", "SAISON": "14.06.2025 - 28.09.2025", "KONTAKT_TE": "+43 5446 2352-0", "WEBLINK": "https://www.skiarlberg.at/de", "KONTAKT_EM": "info@abbag.com" }, "bbox": [ 10.24918, 47.13473, 10.27299, 47.13793 ], "geometry": { "type": "LineString", "coordinates": [ [ 10.24918, 47.13793 ], [ 10.27299, 47.13473 ] ] } }
-]
+    "type": "FeatureCollection",
+    "name": "lifte",
+    "bbox": [
+        10.14385,
+        46.84890,
+        12.43052,
+        47.65341
+    ],
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Drei Seen Bahn",
+                "ANLAGE_NAM": "Kühtai",
+                "ATTR_TYP": "4er Sesselbahn kuppelbar",
+                "OPEN": "Mo-So 09:00-16:30",
+                "SAISON": "22.06.2024 - 22.09.2024",
+                "KONTAKT_TE": "+43 512 / 53 56 - 61 83",
+                "WEBLINK": "https://www.kuehtai.info/",
+                "KONTAKT_EM": "kuehtai@innsbruck.info"
+            },
+            "bbox": [
+                11.01537,
+                47.20494,
+                11.03922,
+                47.21169
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.01537,
+                        47.21169
+                    ],
+                    [
+                        11.03238,
+                        47.20693
+                    ],
+                    [
+                        11.03922,
+                        47.20494
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Hoadlbahn I",
+                "ANLAGE_NAM": "Axams - Axamer Lizum",
+                "ATTR_TYP": "10er Einseilumlaufbahn",
+                "OPEN": "Mo-So  08:30-16:30",
+                "SAISON": "26.06.2025 - 21.09.2025",
+                "KONTAKT_TE": "05234 68240",
+                "WEBLINK": "https://www.axamer-lizum.at/",
+                "KONTAKT_EM": "office@axamer-lizum.at"
+            },
+            "bbox": [
+                11.28985,
+                47.18958,
+                11.3029,
+                47.19397
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.28985,
+                        47.18958
+                    ],
+                    [
+                        11.3029,
+                        47.19397
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Birgitzköpfl",
+                "ANLAGE_NAM": "Axams - Axamer Lizum",
+                "ATTR_TYP": "2er Sessellift fix geklemmt",
+                "OPEN": "Mo-So  08:30-16:30",
+                "SAISON": "26.06.2025 - 21.09.2025",
+                "KONTAKT_TE": "05234 68240",
+                "WEBLINK": "https://www.axamer-lizum.at/",
+                "KONTAKT_EM": "office@axamer-lizum.at"
+            },
+            "bbox": [
+                11.30355,
+                47.19406,
+                11.31635,
+                47.19475
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.30355,
+                        47.19406
+                    ],
+                    [
+                        11.31635,
+                        47.19475
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Hoadlbahn II",
+                "ANLAGE_NAM": "Axams - Axamer Lizum",
+                "ATTR_TYP": "10er Einseilumlaufbahn",
+                "OPEN": "Mi-So  08:30-16:30",
+                "SAISON": "26.06.2025 - 21.09.2025",
+                "KONTAKT_TE": "05234 68240",
+                "WEBLINK": "https://www.axamer-lizum.at/",
+                "KONTAKT_EM": "office@axamer-lizum.at"
+            },
+            "bbox": [
+                11.28139,
+                47.18343,
+                11.28985,
+                47.18959
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.28985,
+                        47.18959
+                    ],
+                    [
+                        11.28139,
+                        47.18343
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Rosshütte",
+                "ANLAGE_NAM": "Seefeld - Roßhütte",
+                "ATTR_TYP": "Standseilbahn",
+                "OPEN": "Mo-So 09:00-17:00",
+                "SAISON": "25.05.2025 - 27.10.2025",
+                "KONTAKT_TE": "+43 5 0880",
+                "WEBLINK": "https://www.seefeld.com/de/rosshuette.html",
+                "KONTAKT_EM": "region@seefeld.com"
+            },
+            "bbox": [
+                11.2,
+                47.33196,
+                11.2277,
+                47.34155
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.2,
+                        47.33196
+                    ],
+                    [
+                        11.21081,
+                        47.3383
+                    ],
+                    [
+                        11.21102,
+                        47.33841
+                    ],
+                    [
+                        11.21125,
+                        47.33852
+                    ],
+                    [
+                        11.2115,
+                        47.33862
+                    ],
+                    [
+                        11.21216,
+                        47.33882
+                    ],
+                    [
+                        11.21478,
+                        47.33959
+                    ],
+                    [
+                        11.21551,
+                        47.33981
+                    ],
+                    [
+                        11.21603,
+                        47.33996
+                    ],
+                    [
+                        11.21627,
+                        47.34002
+                    ],
+                    [
+                        11.21646,
+                        47.34007
+                    ],
+                    [
+                        11.21674,
+                        47.34013
+                    ],
+                    [
+                        11.21698,
+                        47.34017
+                    ],
+                    [
+                        11.21804,
+                        47.3403
+                    ],
+                    [
+                        11.22213,
+                        47.34083
+                    ],
+                    [
+                        11.2277,
+                        47.34155
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Kreuzjochbahn II",
+                "ANLAGE_NAM": "Skizentrum Schlick 2000",
+                "ATTR_TYP": "6er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-16:30",
+                "SAISON": "29.05.2025 - 12.10.2025",
+                "KONTAKT_TE": "+43 5225 62270",
+                "WEBLINK": "https://www.stubai.at/skigebiete/schlick2000/",
+                "KONTAKT_EM": "info@schlick2000.at"
+            },
+            "bbox": [
+                11.30704,
+                47.14536,
+                11.33265,
+                47.15642
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.33265,
+                        47.15642
+                    ],
+                    [
+                        11.30704,
+                        47.14536
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Diasbahn",
+                "ANLAGE_NAM": "Kappl - Diasalpe",
+                "ATTR_TYP": "4er Einseilumlaufbahn",
+                "OPEN": "in Bau",
+                "SAISON": "in Bau",
+                "KONTAKT_TE": "+43 50990 300",
+                "WEBLINK": "https://www.kappl.com/de/",
+                "KONTAKT_EM": "info@kappl.com"
+            },
+            "bbox": [
+                10.35938,
+                47.06035,
+                10.3742,
+                47.06708
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.35938,
+                        47.06708
+                    ],
+                    [
+                        10.3742,
+                        47.06035
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Vallugabahn 1",
+                "ANLAGE_NAM": "St. Anton - Ski Arlberg",
+                "ATTR_TYP": "Zweiseilpendelbahn",
+                "OPEN": "Mo-So 08:15-16:30",
+                "SAISON": "14.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5446 2352-0",
+                "WEBLINK": "https://www.skiarlberg.at/de",
+                "KONTAKT_EM": "info@abbag.com"
+            },
+            "bbox": [
+                10.21313,
+                47.13078,
+                10.23038,
+                47.15471
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.21313,
+                        47.15471
+                    ],
+                    [
+                        10.23038,
+                        47.13078
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Vallugabahn 2",
+                "ANLAGE_NAM": "St. Anton - Ski Arlberg",
+                "ATTR_TYP": "Zweiseilpendelbahn",
+                "OPEN": "Mo-So 08:15-16:30",
+                "SAISON": "14.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5446 2352-0",
+                "WEBLINK": "https://www.skiarlberg.at/de",
+                "KONTAKT_EM": "info@abbag.com"
+            },
+            "bbox": [
+                10.21298,
+                47.15463,
+                10.21344,
+                47.15761
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.21298,
+                        47.15761
+                    ],
+                    [
+                        10.21344,
+                        47.15463
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Kellerjochbahn III (Grafenast-Arbeser)",
+                "ANLAGE_NAM": "Schwaz - Kellerjoch",
+                "ATTR_TYP": "2er Sessellift fix geklemmt",
+                "OPEN": "Di-So 08:45-16:30",
+                "SAISON": "05.07.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5242 623 23-0",
+                "WEBLINK": "https://www.kellerjochbahn.at/",
+                "KONTAKT_EM": "info@kellerjochbahn.at"
+            },
+            "bbox": [
+                11.71971,
+                47.32086,
+                11.74262,
+                47.32141
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.74262,
+                        47.32141
+                    ],
+                    [
+                        11.71971,
+                        47.32086
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Hochkössen",
+                "ANLAGE_NAM": "Kössen - Unterberghorn",
+                "ATTR_TYP": "6er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:30-16:30",
+                "SAISON": "26.10.2025 - 28.10.2025",
+                "KONTAKT_TE": "+43 5375 6226",
+                "WEBLINK": "https://skisport.com/hochkoessen/de",
+                "KONTAKT_EM": "koessen@skisport.com"
+            },
+            "bbox": [
+                12.42118,
+                47.63222,
+                12.43052,
+                47.65341
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        12.42118,
+                        47.65341
+                    ],
+                    [
+                        12.43052,
+                        47.63222
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Kreuzjochbahn I",
+                "ANLAGE_NAM": "Skizentrum Schlick 2000",
+                "ATTR_TYP": "6er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-16:30",
+                "SAISON": "29.05.2025 - 12.10.2025",
+                "KONTAKT_TE": "+43 5225 62270",
+                "WEBLINK": "https://www.stubai.at/skigebiete/schlick2000/",
+                "KONTAKT_EM": "info@schlick2000.at"
+            },
+            "bbox": [
+                11.33279,
+                47.15531,
+                11.3435,
+                47.15643
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.33279,
+                        47.15643
+                    ],
+                    [
+                        11.3435,
+                        47.15531
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Silvrettabahn I",
+                "ANLAGE_NAM": "Ischgl - Silvretta",
+                "ATTR_TYP": "Doppelseilumlaufbahn",
+                "OPEN": "Mo-So 08:30-17:00",
+                "SAISON": "28.06.2025 - 07.09.2025",
+                "KONTAKT_TE": "+43 50990 100",
+                "WEBLINK": "https://www.ischgl.com/de/",
+                "KONTAKT_EM": "info@paznaun-ischgl.com"
+            },
+            "bbox": [
+                10.28822,
+                46.99613,
+                10.3022,
+                47.01
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.28822,
+                        47.01
+                    ],
+                    [
+                        10.3022,
+                        46.99613
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Silvrettabahn II",
+                "ANLAGE_NAM": "Ischgl - Silvretta",
+                "ATTR_TYP": "Doppelseilumlaufbahn",
+                "OPEN": "Mo-So 08:30-17:00",
+                "SAISON": "28.06.2025 - 07.09.2025",
+                "KONTAKT_TE": "+43 50990 100",
+                "WEBLINK": "https://www.ischgl.com/de/",
+                "KONTAKT_EM": "info@paznaun-ischgl.com"
+            },
+            "bbox": [
+                10.30224,
+                46.98248,
+                10.31696,
+                46.9961
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.30224,
+                        46.9961
+                    ],
+                    [
+                        10.30225,
+                        46.99609
+                    ],
+                    [
+                        10.31696,
+                        46.98248
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Kapallbahn",
+                "ANLAGE_NAM": "St. Anton - Ski Arlberg",
+                "ATTR_TYP": "6er Sesselbahn kuppelbar",
+                "OPEN": "Mo-So 08:15-16:30",
+                "SAISON": "14.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5446 2352-0",
+                "WEBLINK": "https://www.skiarlberg.at/de",
+                "KONTAKT_EM": "info@abbag.com"
+            },
+            "bbox": [
+                10.24842,
+                47.13764,
+                10.24862,
+                47.14826
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.24862,
+                        47.14826
+                    ],
+                    [
+                        10.24842,
+                        47.13764
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Hochserles",
+                "ANLAGE_NAM": "Mieders - Serleslifte",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-16:30",
+                "SAISON": "16.05.2025 - 02.11.2025",
+                "KONTAKT_TE": "+43 501 881 0",
+                "WEBLINK": "https://www.stubai.at/skigebiete/serlesbahnen/",
+                "KONTAKT_EM": "kassa@serlesbahnen.com"
+            },
+            "bbox": [
+                11.38011,
+                47.14994,
+                11.39499,
+                47.16354
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.38011,
+                        47.16354
+                    ],
+                    [
+                        11.39499,
+                        47.14994
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Alpkogelbahn",
+                "ANLAGE_NAM": "Galtür - Birkhahn",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00–16:45",
+                "SAISON": "19.06.2025 - 12.10.2025",
+                "KONTAKT_TE": "+43 5443 8344",
+                "WEBLINK": "https://www.galtuer.com/de/bergbahnen-galtuer",
+                "KONTAKT_EM": "info@bergbahnen-galtuer.at"
+            },
+            "bbox": [
+                10.14385,
+                46.96627,
+                10.16218,
+                46.96704
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.14385,
+                        46.96704
+                    ],
+                    [
+                        10.16218,
+                        46.96627
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Elfer",
+                "ANLAGE_NAM": "Neustift - Elfer",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-16:30",
+                "SAISON": "16.05.2025 - 02.11.2025",
+                "KONTAKT_TE": "+43 501 881 0",
+                "WEBLINK": "https://www.stubai.at/skigebiete/elferbahnen/",
+                "KONTAKT_EM": "kassa@elferbahnen.at"
+            },
+            "bbox": [
+                11.31238,
+                47.09863,
+                11.32341,
+                47.11092
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.31238,
+                        47.11092
+                    ],
+                    [
+                        11.32341,
+                        47.09863
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Galzigbahn",
+                "ANLAGE_NAM": "St. Anton - Ski Arlberg",
+                "ATTR_TYP": "Doppelseilumlaufbahn",
+                "OPEN": "Mo-So 08:15-16:30",
+                "SAISON": "14.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5446 2352-0",
+                "WEBLINK": "https://www.skiarlberg.at/de",
+                "KONTAKT_EM": "info@abbag.com"
+            },
+            "bbox": [
+                10.23072,
+                47.12814,
+                10.26299,
+                47.13084
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.23072,
+                        47.13084
+                    ],
+                    [
+                        10.26299,
+                        47.12814
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Nordkettenbahn I",
+                "ANLAGE_NAM": "Innsbruck - Nordkette",
+                "ATTR_TYP": "Zweiseilpendelbahn",
+                "OPEN": "Mo-So 08:30-18:30",
+                "SAISON": "27.04.2024 - 03.11.2024",
+                "KONTAKT_TE": "+43 (0) 512 293344",
+                "WEBLINK": "https://nordkette.com/",
+                "KONTAKT_EM": "info@nordkette.com"
+            },
+            "bbox": [
+                11.37974,
+                47.28615,
+                11.39901,
+                47.30637
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.37974,
+                        47.30637
+                    ],
+                    [
+                        11.39901,
+                        47.28615
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Nordkettenbahn II",
+                "ANLAGE_NAM": "Innsbruck - Nordkette",
+                "ATTR_TYP": "Zweiseilpendelbahn",
+                "OPEN": "Mo-So 09:00-17:45",
+                "SAISON": "27.04.2024 - 03.11.2024",
+                "KONTAKT_TE": "+43 (0) 512 293344",
+                "WEBLINK": "https://nordkette.com/",
+                "KONTAKT_EM": "info@nordkette.com"
+            },
+            "bbox": [
+                11.37978,
+                47.30654,
+                11.38354,
+                47.31202
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.38354,
+                        47.31202
+                    ],
+                    [
+                        11.37978,
+                        47.30654
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Hungerburgbahn",
+                "ANLAGE_NAM": "Innsbruck - Nordkette",
+                "ATTR_TYP": "Standseilbahn",
+                "OPEN": "Mo-Fr 07:15-19:15; Sa-So 08:00-19:15",
+                "SAISON": "27.04.2024 - 03.11.2024",
+                "KONTAKT_TE": "+43 (0) 512 293344",
+                "WEBLINK": "https://nordkette.com/",
+                "KONTAKT_EM": "info@nordkette.com"
+            },
+            "bbox": [
+                11.39532,
+                47.27118,
+                11.40109,
+                47.28621
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.39532,
+                        47.27118
+                    ],
+                    [
+                        11.39537,
+                        47.27177
+                    ],
+                    [
+                        11.3954,
+                        47.27241
+                    ],
+                    [
+                        11.39542,
+                        47.27261
+                    ],
+                    [
+                        11.39548,
+                        47.27285
+                    ],
+                    [
+                        11.39565,
+                        47.27318
+                    ],
+                    [
+                        11.39584,
+                        47.27346
+                    ],
+                    [
+                        11.39657,
+                        47.27439
+                    ],
+                    [
+                        11.39685,
+                        47.27477
+                    ],
+                    [
+                        11.397,
+                        47.27495
+                    ],
+                    [
+                        11.39707,
+                        47.27507
+                    ],
+                    [
+                        11.39715,
+                        47.27523
+                    ],
+                    [
+                        11.39724,
+                        47.27547
+                    ],
+                    [
+                        11.39726,
+                        47.27562
+                    ],
+                    [
+                        11.39726,
+                        47.2758
+                    ],
+                    [
+                        11.39725,
+                        47.27613
+                    ],
+                    [
+                        11.39726,
+                        47.27635
+                    ],
+                    [
+                        11.39727,
+                        47.27652
+                    ],
+                    [
+                        11.3973,
+                        47.27668
+                    ],
+                    [
+                        11.39737,
+                        47.27688
+                    ],
+                    [
+                        11.39746,
+                        47.27707
+                    ],
+                    [
+                        11.39754,
+                        47.27725
+                    ],
+                    [
+                        11.39772,
+                        47.27748
+                    ],
+                    [
+                        11.39791,
+                        47.27771
+                    ],
+                    [
+                        11.39836,
+                        47.27831
+                    ],
+                    [
+                        11.39851,
+                        47.27854
+                    ],
+                    [
+                        11.39864,
+                        47.27878
+                    ],
+                    [
+                        11.39899,
+                        47.27942
+                    ],
+                    [
+                        11.40024,
+                        47.28169
+                    ],
+                    [
+                        11.40069,
+                        47.28247
+                    ],
+                    [
+                        11.40084,
+                        47.28275
+                    ],
+                    [
+                        11.40092,
+                        47.28295
+                    ],
+                    [
+                        11.40101,
+                        47.28321
+                    ],
+                    [
+                        11.40106,
+                        47.28346
+                    ],
+                    [
+                        11.40109,
+                        47.2837
+                    ],
+                    [
+                        11.40109,
+                        47.28392
+                    ],
+                    [
+                        11.40108,
+                        47.28418
+                    ],
+                    [
+                        11.40104,
+                        47.28438
+                    ],
+                    [
+                        11.40099,
+                        47.28456
+                    ],
+                    [
+                        11.40076,
+                        47.28544
+                    ],
+                    [
+                        11.40072,
+                        47.28557
+                    ],
+                    [
+                        11.40066,
+                        47.28568
+                    ],
+                    [
+                        11.4006,
+                        47.28578
+                    ],
+                    [
+                        11.40046,
+                        47.28594
+                    ],
+                    [
+                        11.4002,
+                        47.28621
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Muttereralmbahn",
+                "ANLAGE_NAM": "Mutters - Mutterer Alm",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-17:00",
+                "SAISON": "25.05.2024 - 31.10.2024",
+                "KONTAKT_TE": "+43 512 54 83 30",
+                "WEBLINK": "https://www.muttereralm.at/de/mutters-innsbruck-tirol/1-0.html",
+                "KONTAKT_EM": "office@muttereralm.at"
+            },
+            "bbox": [
+                11.33371,
+                47.21159,
+                11.36627,
+                47.22245
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.36627,
+                        47.22245
+                    ],
+                    [
+                        11.33371,
+                        47.21159
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "8EUB Bergeralm",
+                "ANLAGE_NAM": "Steinach - Bergeralm",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-17:00",
+                "SAISON": "19.06.2025 - 14.09.2025",
+                "KONTAKT_TE": "+43 5272 6333",
+                "WEBLINK": "www.bergeralm.net",
+                "KONTAKT_EM": "mail@bergeralm.net"
+            },
+            "bbox": [
+                11.45461,
+                47.07615,
+                11.45974,
+                47.08688
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.45974,
+                        47.08688
+                    ],
+                    [
+                        11.45461,
+                        47.07615
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Rendlbahn",
+                "ANLAGE_NAM": "St. Anton - Ski Arlberg",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 08:15-16:30",
+                "SAISON": "14.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5446 2352-0",
+                "WEBLINK": "https://www.skiarlberg.at/de",
+                "KONTAKT_EM": "info@abbag.com"
+            },
+            "bbox": [
+                10.26316,
+                47.10483,
+                10.26785,
+                47.12677
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.26316,
+                        47.12677
+                    ],
+                    [
+                        10.26344,
+                        47.12534
+                    ],
+                    [
+                        10.26785,
+                        47.10483
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Hohe Mut Bahn",
+                "ANLAGE_NAM": "Obergurgl - Hochgurgl",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-16:00",
+                "SAISON": "21.06.2024 - 15.09.2024",
+                "KONTAKT_TE": "+43 (0) 57200 200",
+                "WEBLINK": "https://www.gurgl.com/de?setSeason=winter",
+                "KONTAKT_EM": "info@oetztal.com"
+            },
+            "bbox": [
+                11.02286,
+                46.8489,
+                11.02886,
+                46.86919
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.02886,
+                        46.8489
+                    ],
+                    [
+                        11.02286,
+                        46.86031
+                    ],
+                    [
+                        11.02696,
+                        46.86919
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Fimbabahn I",
+                "ANLAGE_NAM": "Ischgl - Silvretta",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 08:30-17:00",
+                "SAISON": "08.09.2025 - 12.10.2025",
+                "KONTAKT_TE": "+43 50990 100",
+                "WEBLINK": "https://www.ischgl.com/de/",
+                "KONTAKT_EM": "info@paznaun-ischgl.com"
+            },
+            "bbox": [
+                10.2937,
+                46.99752,
+                10.30099,
+                47.01158
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.30099,
+                        46.99752
+                    ],
+                    [
+                        10.2937,
+                        47.01158
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Fimbabahn II",
+                "ANLAGE_NAM": "Ischgl - Silvretta",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 08:30-17:00",
+                "SAISON": "08.09.2025 - 12.10.2025",
+                "KONTAKT_TE": "+43 50990 100",
+                "WEBLINK": "https://www.ischgl.com/de/",
+                "KONTAKT_EM": "info@paznaun-ischgl.com"
+            },
+            "bbox": [
+                10.30103,
+                46.98259,
+                10.31712,
+                46.99748
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.31712,
+                        46.98259
+                    ],
+                    [
+                        10.30103,
+                        46.99748
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Peter Anich I",
+                "ANLAGE_NAM": "Oberperfuss - Rangger Köpfl",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Sa-So 09:00-16:00",
+                "SAISON": "29.05.2025 - 03.11.2025",
+                "KONTAKT_TE": "+43(0)5232 81505",
+                "WEBLINK": "https://www.rangger-koepfl.at/winter/",
+                "KONTAKT_EM": "office@rangger-koepfl.at"
+            },
+            "bbox": [
+                11.22148,
+                47.23829,
+                11.2374,
+                47.24567
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.2374,
+                        47.24567
+                    ],
+                    [
+                        11.22148,
+                        47.23829
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "8 EUB Eisjoch (Schaufeljoch)",
+                "ANLAGE_NAM": "Stubaier Gletscher",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "-",
+                "SAISON": "28.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5226 8141",
+                "WEBLINK": "https://www.stubaier-gletscher.com/",
+                "KONTAKT_EM": "info@stubaier-gletscher.com"
+            },
+            "bbox": [
+                11.11083,
+                46.97715,
+                11.11453,
+                46.98709
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.11453,
+                        46.98709
+                    ],
+                    [
+                        11.11083,
+                        46.97715
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Flimjoch",
+                "ANLAGE_NAM": "Ischgl - Silvretta",
+                "ATTR_TYP": "8er Sesselbahn kuppelbar",
+                "OPEN": "Mo-So 09:00-16:00",
+                "SAISON": "28.06.2025-12.10.2025",
+                "KONTAKT_TE": "+43 50990 100",
+                "WEBLINK": "https://www.ischgl.com/de/",
+                "KONTAKT_EM": "info@paznaun-ischgl.com"
+            },
+            "bbox": [
+                10.31642,
+                46.97996,
+                10.33975,
+                46.98138
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.31642,
+                        46.98138
+                    ],
+                    [
+                        10.33975,
+                        46.97996
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Eisgratbahn I 3S",
+                "ANLAGE_NAM": "Stubaier Gletscher",
+                "ATTR_TYP": "Dreiseilumlaufbahn",
+                "OPEN": "-",
+                "SAISON": "28.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5226 8141",
+                "WEBLINK": "https://www.stubaier-gletscher.com/",
+                "KONTAKT_EM": "info@stubaier-gletscher.com"
+            },
+            "bbox": [
+                11.14112,
+                46.99709,
+                11.16206,
+                47.01318
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.16206,
+                        47.01318
+                    ],
+                    [
+                        11.14112,
+                        46.99709
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Eisgratbahn II 3S",
+                "ANLAGE_NAM": "Stubaier Gletscher",
+                "ATTR_TYP": "Dreiseilumlaufbahn",
+                "OPEN": "-",
+                "SAISON": "28.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5226 8141",
+                "WEBLINK": "https://www.stubaier-gletscher.com/",
+                "KONTAKT_EM": "info@stubaier-gletscher.com"
+            },
+            "bbox": [
+                11.11507,
+                46.98716,
+                11.14076,
+                46.99708
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.14076,
+                        46.99708
+                    ],
+                    [
+                        11.11507,
+                        46.98716
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Kirchenkar I",
+                "ANLAGE_NAM": "Obergurgl - Hochgurgl",
+                "ATTR_TYP": "10er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-16:00",
+                "SAISON": "21.06.2024 - 15.09.2024",
+                "KONTAKT_TE": "+43 (0) 57200 200",
+                "WEBLINK": "https://www.gurgl.com/de?setSeason=winter",
+                "KONTAKT_EM": "info@oetztal.com"
+            },
+            "bbox": [
+                11.05366,
+                46.90392,
+                11.07137,
+                46.9092
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.07137,
+                        46.90392
+                    ],
+                    [
+                        11.05366,
+                        46.9092
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Patscherkofelbahn",
+                "ANLAGE_NAM": "Innsbruck - Patscherkofel",
+                "ATTR_TYP": "10er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-17:00",
+                "SAISON": "17.05.2025 - 02.11.2025",
+                "KONTAKT_TE": "+43 512 37 72 34",
+                "WEBLINK": "https://www.patscherkofelbahn.at/",
+                "KONTAKT_EM": "info@patscherkofelbahn.at"
+            },
+            "bbox": [
+                11.42672,
+                47.21007,
+                11.45171,
+                47.22199
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.42672,
+                        47.22199
+                    ],
+                    [
+                        11.44193,
+                        47.2113
+                    ],
+                    [
+                        11.45171,
+                        47.21007
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Peter Anich II",
+                "ANLAGE_NAM": "Oberperfuss - Rangger Köpfl",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Sa-So 09:00-16:00",
+                "SAISON": "29.05.2025 - 03.11.2025",
+                "KONTAKT_TE": "+43(0)5232 81505",
+                "WEBLINK": "https://www.rangger-koepfl.at/winter/",
+                "KONTAKT_EM": "office@rangger-koepfl.at"
+            },
+            "bbox": [
+                11.19983,
+                47.23824,
+                11.22114,
+                47.24022
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.22114,
+                        47.23824
+                    ],
+                    [
+                        11.19983,
+                        47.24022
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Glungezerbahn I",
+                "ANLAGE_NAM": "Tulfes - Glungezer",
+                "ATTR_TYP": "10er Einseilumlaufbahn",
+                "OPEN": "Mo-So 08:30-17:00",
+                "SAISON": "30.05.2024 - 03.11.2024",
+                "KONTAKT_TE": "+43 5223 78 321",
+                "WEBLINK": "https://www.glungezerbahn.at/",
+                "KONTAKT_EM": "info@glungezerbahn.at"
+            },
+            "bbox": [
+                11.53527,
+                47.24203,
+                11.54362,
+                47.25637
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.53527,
+                        47.25637
+                    ],
+                    [
+                        11.54362,
+                        47.24203
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Kirchenkar II",
+                "ANLAGE_NAM": "Obergurgl - Hochgurgl",
+                "ATTR_TYP": "10er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-16:00",
+                "SAISON": "21.06.2024 - 15.09.2024",
+                "KONTAKT_TE": "+43 (0) 57200 200",
+                "WEBLINK": "https://www.gurgl.com/de?setSeason=winter",
+                "KONTAKT_EM": "info@oetztal.com"
+            },
+            "bbox": [
+                11.07123,
+                46.90404,
+                11.07772,
+                46.90445
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.07123,
+                        46.90404
+                    ],
+                    [
+                        11.07772,
+                        46.90445
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Kombibahn Hoher Turm",
+                "ANLAGE_NAM": "Steinach - Bergeralm",
+                "ATTR_TYP": "Kombinationsbahn",
+                "OPEN": "Mo-So 09:00-17:00",
+                "SAISON": "19.06.2025 - 14.09.2025",
+                "KONTAKT_TE": "+43 5272 6333",
+                "WEBLINK": "www.bergeralm.net",
+                "KONTAKT_EM": "mail@bergeralm.net"
+            },
+            "bbox": [
+                11.44331,
+                47.06115,
+                11.45359,
+                47.07644
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.45359,
+                        47.07644
+                    ],
+                    [
+                        11.44331,
+                        47.06115
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Peter Anich III",
+                "ANLAGE_NAM": "Oberperfuss - Rangger Köpfl",
+                "ATTR_TYP": "Kombinationsbahn",
+                "OPEN": "Sa-So 09:00-16:00",
+                "SAISON": "29.05.2025 - 03.11.2025",
+                "KONTAKT_TE": "+43(0)5232 81505",
+                "WEBLINK": "https://www.rangger-koepfl.at/winter/",
+                "KONTAKT_EM": "office@rangger-koepfl.at"
+            },
+            "bbox": [
+                11.18172,
+                47.24043,
+                11.19882,
+                47.24274
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.19882,
+                        47.24043
+                    ],
+                    [
+                        11.18172,
+                        47.24274
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Götznerbahn",
+                "ANLAGE_NAM": "Mutters - Mutterer Alm",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-17:00",
+                "SAISON": "25.05.2024 - 31.10.2024",
+                "KONTAKT_TE": "+43 512 54 83 30",
+                "WEBLINK": "https://www.muttereralm.at/de/mutters-innsbruck-tirol/1-0.html",
+                "KONTAKT_EM": "office@muttereralm.at"
+            },
+            "bbox": [
+                11.31464,
+                47.20755,
+                11.32847,
+                47.23181
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.32847,
+                        47.20755
+                    ],
+                    [
+                        11.31464,
+                        47.23181
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Tulfein Express",
+                "ANLAGE_NAM": "Tulfes - Glungezer",
+                "ATTR_TYP": "Kombinationsbahn",
+                "OPEN": "Mo-So 08:30-17:00",
+                "SAISON": "30.05.2024 - 03.11.2024",
+                "KONTAKT_TE": "+43 5223 78 321",
+                "WEBLINK": "https://www.glungezerbahn.at/",
+                "KONTAKT_EM": "info@glungezerbahn.at"
+            },
+            "bbox": [
+                11.52931,
+                47.22572,
+                11.54344,
+                47.2416
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.52931,
+                        47.22572
+                    ],
+                    [
+                        11.54344,
+                        47.2416
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Härmelekopfbahn",
+                "ANLAGE_NAM": "Seefeld - Roßhütte",
+                "ATTR_TYP": "Zweiseilpendelbahn",
+                "OPEN": "Mo-So 09:00-17:00",
+                "SAISON": "25.05.2025 - 27.10.2025",
+                "KONTAKT_TE": "+43 5 0880",
+                "WEBLINK": "https://www.seefeld.com/de/rosshuette.html",
+                "KONTAKT_EM": "region@seefeld.com"
+            },
+            "bbox": [
+                11.22743,
+                47.32902,
+                11.22774,
+                47.34131
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.22774,
+                        47.34131
+                    ],
+                    [
+                        11.22743,
+                        47.32902
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Seefelder Jochbahn",
+                "ANLAGE_NAM": "Seefeld - Roßhütte",
+                "ATTR_TYP": "Zweiseilpendelbahn",
+                "OPEN": "Mo-So 09:00-17:00",
+                "SAISON": "25.05.2025 - 27.10.2025",
+                "KONTAKT_TE": "+43 5 0880",
+                "WEBLINK": "https://www.seefeld.com/de/rosshuette.html",
+                "KONTAKT_EM": "region@seefeld.com"
+            },
+            "bbox": [
+                11.22809,
+                47.34078,
+                11.23947,
+                47.34159
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.22809,
+                        47.34159
+                    ],
+                    [
+                        11.23947,
+                        47.34078
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Tulfein Express",
+                "ANLAGE_NAM": "Tulfes - Glungezer",
+                "ATTR_TYP": "Kombinationsbahn",
+                "OPEN": "Mo-So 08:30-17:00",
+                "SAISON": "30.05.2024 - 03.11.2024",
+                "KONTAKT_TE": "+43 5223 78 321",
+                "WEBLINK": "https://www.glungezerbahn.at/",
+                "KONTAKT_EM": "info@glungezerbahn.at"
+            },
+            "bbox": [
+                11.52931,
+                47.22572,
+                11.54344,
+                47.2416
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.52931,
+                        47.22572
+                    ],
+                    [
+                        11.54344,
+                        47.2416
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Galtbergbahn",
+                "ANLAGE_NAM": "Skizentrum Schlick 2000",
+                "ATTR_TYP": "10er Einseilumlaufbahn",
+                "OPEN": "Mo-So 09:00-16:30",
+                "SAISON": "29.05.2025 - 12.10.2025",
+                "KONTAKT_TE": "+43 5225 62270",
+                "WEBLINK": "https://www.stubai.at/skigebiete/schlick2000/",
+                "KONTAKT_EM": "info@schlick2000.at"
+            },
+            "bbox": [
+                11.31966,
+                47.15051,
+                11.33594,
+                47.15732
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.33594,
+                        47.15732
+                    ],
+                    [
+                        11.31966,
+                        47.15051
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Kreithbahn",
+                "ANLAGE_NAM": "Leutasch",
+                "ATTR_TYP": "3er Sessellift fix geklemmt",
+                "OPEN": "Mo-So 09:30-17:00",
+                "SAISON": "01.05.2025 - 01.11.2025",
+                "KONTAKT_TE": "+43 5214 6219",
+                "WEBLINK": "https://www.katzenkopf-leutasch.at/de/",
+                "KONTAKT_EM": "info@katzenkopf-leutasch.at"
+            },
+            "bbox": [
+                11.16202,
+                47.35844,
+                11.16561,
+                47.36379
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        11.16561,
+                        47.36379
+                    ],
+                    [
+                        11.16202,
+                        47.35844
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Gampenbahn (Schindlerbahn I)",
+                "ANLAGE_NAM": "St. Anton - Ski Arlberg",
+                "ATTR_TYP": "4er Sesselbahn kuppelbar",
+                "OPEN": "Mo-So 08:15-16:30",
+                "SAISON": "14.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5446 2352-0",
+                "WEBLINK": "https://www.skiarlberg.at/de",
+                "KONTAKT_EM": "info@abbag.com"
+            },
+            "bbox": [
+                10.2494,
+                47.12876,
+                10.26314,
+                47.13722
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.2494,
+                        47.13722
+                    ],
+                    [
+                        10.26314,
+                        47.12876
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "STAETTE_NA": "Nassereinbahn",
+                "ANLAGE_NAM": "St. Anton - Ski Arlberg",
+                "ATTR_TYP": "8er Einseilumlaufbahn",
+                "OPEN": "Mo-So 08:15-16:30",
+                "SAISON": "14.06.2025 - 28.09.2025",
+                "KONTAKT_TE": "+43 5446 2352-0",
+                "WEBLINK": "https://www.skiarlberg.at/de",
+                "KONTAKT_EM": "info@abbag.com"
+            },
+            "bbox": [
+                10.24918,
+                47.13473,
+                10.27299,
+                47.13793
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        10.24918,
+                        47.13793
+                    ],
+                    [
+                        10.27299,
+                        47.13473
+                    ]
+                ]
+            }
+        }
+    ]
 }
