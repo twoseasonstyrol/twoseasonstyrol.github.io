@@ -177,7 +177,8 @@ h4 {
   max-width: 1500px;
   margin: 10px auto;
   line-height: 1.6;
-  margin-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
   color: #090909;
   font-size: 1.5rem;
 }
