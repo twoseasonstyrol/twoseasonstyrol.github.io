@@ -231,7 +231,8 @@ async function loadSwim(url) {
             /* KI_ENDE */
         },
         filter: function (feature, layer) {
-            return feature.properties.ATTR_SCHWI === "Halle";
+            return feature.properties.ATTR_SCHWI === "Halle"|| 
+            feature.properties.ATTR_SCHWI === "Freibad und Halle";
         },
     }).addTo(overlays.swim);
 }
